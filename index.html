@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Suryawanshi - Software Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Parth Suryawanshi</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-image">
+                    <img src="./assets/images/Photo.jpg" alt="Parth Suryawanshi" class="profile-img">
+                    <div class="hero-image-border"></div>
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Parth Suryawanshi</span>
+                </h1>
+                <div class="typing-container">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Final-year Computer Science student at Dr. D. Y. Patil ACS College with a passion for software and web development. 
+                    Skilled in PHP, Java, Python, MySQL, PostgreSQL, and front-end tools. Currently pursuing MCA at MIT World Peace University.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="./assets/images/Parth Suryawanshi.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/parthsuryawanshi" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Parths01" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:parthsuryawanshi001@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+918459471544" class="social-link" title="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="about-description">
+                        Hello! I'm Parth Suryawanshi, a final-year Computer Science student at Dr. D. Y. Patil ACS College 
+                        with a passion for software and web development. I'm skilled in PHP, Java, Python, MySQL, PostgreSQL, 
+                        and front-end technologies like HTML, CSS, and JavaScript.
+                    </p>
+                    <p class="about-description">
+                        I enjoy building innovative projects that solve real-world problems, from IoT solutions like my 
+                        "Automated Doctor Dustbin" to web platforms like "OneShot" and "MediSync". Currently pursuing my 
+                        MCA at MIT World Peace University, I'm eager to contribute to exciting tech projects and continue 
+                        learning in this fast-paced environment.
+                    </p>
+                </div>
+                <div class="about-info" data-aos="fade-left">
+                    <div class="info-card">
+                        <h3>Education</h3>
+                        <div class="education-item">
+                            <h4>Master of Computer Applications (MCA)</h4>
+                            <p>MIT World Peace University</p>
+                            <span>2025 - 2027 (Expected)</span>
+                        </div>
+                        <div class="education-item">
+                            <h4>B.Sc. Computer Science</h4>
+                            <p>Dr. D. Y. Patil ACS College, Pune (SPPU)</p>
+                            <span>2022 - 2025 | CGPA: 7.89</span>
+                        </div>
+                        
+                        <h3 style="margin-top: 2rem;">Awards & Recognition</h3>
+                        <div class="education-item">
+                            <h4>🥇 1st Rank - Avishkar Competition</h4>
+                            <p>Pune College Level</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>📄 Published Research Paper</h4>
+                            <p>IJRAR - "Automated Waste Garbage Separation using Arduino and Sensors"</p>
+                            <span>April 2025 | Impact Factor: 7.17</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Section -->
+            <div class="skills-section" data-aos="fade-up">
+                <h3 class="skills-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Web Technologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Technologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Arduino</span>
+                            <span class="skill-tag">Microsoft 365 Copilot</span>
+                            <span class="skill-tag">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/images/oneshot-project.jpg" alt="OneShot Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/Parths01/disposable-camera" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">OneShot - Disposable Online Camera</h3>
+                        <p class="project-description">
+                            A time-limited media sharing platform that enables 24-hour access with role-based uploads and admin controls. 
+                            Built with modern web technologies to create a unique ephemeral sharing experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">
+                                <i class="fas fa-check"></i> Completed
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="assets/images/medisync-project.jpg" alt="MediSync Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/Parths01/MediSync" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MediSync - Healthcare Dashboard</h3>
+                        <p class="project-description">
+                            A comprehensive healthcare dashboard to track patient metrics and generate insights. 
+                            Integrates with MySQL databases and Excel data to provide real-time healthcare analytics.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Excel Integration</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">
+                                <i class="fas fa-check"></i> Completed
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="assets/images/iot-dustbin-project.jpg" alt="IoT Dustbin Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" title="Research Paper">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automated Waste Garbage Separation using Arduino and Sensors</h3>
+                        <p class="project-description">
+                            Smart dustbin using Arduino and sensors to detect waste levels and automate alerts. 
+                            Published research paper in IJRAR with Impact Factor 7.17. Features servo motor automation and real-time monitoring.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">IoT Sensors</span>
+                            <span class="tech-tag">Servo Motor</span>
+                            <span class="tech-tag">C++</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge published">
+                                <i class="fas fa-award"></i> Published Research
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="assets/images/veer-sahayata.jpg" alt="Veer Sahayata Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/Parths01/veer-sahayata" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Veer Sahayata - Defence Welfare Portal</h3>
+                        <p class="project-description">
+                            A comprehensive web portal for Indian Defence personnel and their families to access services 
+                            like pension tracking, news updates, document verification, and educational support.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">
+                                <i class="fas fa-check"></i> Completed (v2.0.0)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Certificates & Achievements</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h3>Java Programming & DSA</h3>
+                        <p>Introduction to Programming using Java & Data Structures and Algorithms</p>
+                        <div class="certificate-badge">
+                            <i class="fas fa-certificate"></i> Certified
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Development using HTML5 and JavaScript</p>
+                        <div class="certificate-badge">
+                            <i class="fas fa-certificate"></i> Certified
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3>Microsoft 365 Copilot</h3>
+                        <p>Learning Microsoft 365 Copilot</p>
+                        <div class="certificate-badge">
+                            <i class="fas fa-certificate"></i> Certified
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Prompt Writing</h3>
+                        <p>Microsoft Copilot: The Art of Prompt Writing</p>
+                        <div class="certificate-badge">
+                            <i class="fas fa-certificate"></i> Certified
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data Analytics</h3>
+                        <p>Deloitte Australia – Data Analytics Job Simulation</p>
+                        <div class="certificate-badge">
+                            <i class="fas fa-briefcase"></i> Simulation
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, projects, or just having a conversation about technology!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>parthsuryawanshi001@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 8459471544</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Pune, Maharashtra, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Currently</h4>
+                                <p>MCA Student at MIT World Peace University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<style>
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-text {
+        margin-bottom: 10px;
+    }
+    .footer-links {
+        margin-bottom: 10px;
+    }
+    .footer-links a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+</style>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Parth Suryawanshi | Built with 💻 using HTML, CSS & JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
