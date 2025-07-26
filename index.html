@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Suryawanshi - Full Stack Developer & MCA Student</title>
+    <meta name="description" content="Parth Suryawanshi - MCA Student and Full Stack Developer with expertise in React.js, Java, AWS, and enterprise solutions.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-text">
+                <span>P</span><span>A</span><span>R</span><span>T</span><span>H</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="brand-link">
+                    <span class="brand-text">Parth</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-links">
+                    <a href="#home" class="nav-link" data-text="Home">Home</a>
+                    <a href="#about" class="nav-link" data-text="About">About</a>
+                    <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+                    <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+                    <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="./assets/certificates/Parth Suryawanshi.pdf" class="btn-resume" download>
+                        <span>Resume</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-greeting">
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-name">Parth Suryawanshi</span>
+                    <span class="title-role">Full Stack Developer</span>
+                </h1>
+                
+                <div class="hero-subtitle">
+                    <div class="typing-container">
+                        <span class="static-text">I specialize in </span>
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                </div>
+                
+                <p class="hero-description">
+                    Currently pursuing an MCA at MIT World Peace University, I'm a passionate full-stack developer 
+                    with expertise in React.js, Java, AWS, and enterprise solutions. I've gained valuable experience 
+                    through virtual programs at JPMorgan Chase, AWS, and Deloitte, building scalable applications 
+                    and contributing to innovative projects that solve real-world problems.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="stat-number">7.89</span>
+                        <span class="stat-label">CGPA</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="800">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Let's Connect</span>
+                        <i class="fas fa-comment-dots"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-social" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="social-label">Follow Me</div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/parthsuryawanshi" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Parths01" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://parths01.github.io/Portfolio/" class="social-link" aria-label="Website">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="mailto:parthsuryawanshi001@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+                <div class="image-container">
+                    <div class="image-bg"></div>
+                    <img src="./assets/images/profile.jpg" alt="Parth Suryawanshi - Full Stack Developer" class="profile-image">
+                    <div class="image-frame"></div>
+                </div>
+                <div class="floating-elements">
+                    <div class="tech-icon tech-react"><i class="fab fa-react"></i></div>
+                    <div class="tech-icon tech-java"><i class="fab fa-java"></i></div>
+                    <div class="tech-icon tech-aws"><i class="fab fa-aws"></i></div>
+                    <div class="tech-icon tech-js"><i class="fab fa-js-square"></i></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">
+                    Passionate developer with a drive for innovation and continuous learning
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                    <div class="text-block">
+                        <h3>Who Am I?</h3>
+                        <p>
+                            I'm Parth Suryawanshi, an MCA student at MIT World Peace University with a passion for 
+                            full-stack development. My journey in technology began with curiosity and has evolved 
+                            into expertise across multiple domains including web development, cloud architecture, 
+                            and enterprise solutions.
+                        </p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3>What I Do?</h3>
+                        <p>
+                            I specialize in building scalable web applications using modern technologies like React.js, 
+                            Java, and AWS. Through virtual experiences with industry leaders like JPMorgan Chase and 
+                            Deloitte, I've gained insights into enterprise-level development practices and data engineering.
+                        </p>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Academic Excellence with 7.89 CGPA</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Avishkar Research Competition (Zonal Level)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-medal"></i>
+                            <span>2nd Runner-up in SAVOIR-FAIRE Competition</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Published Research Paper (Impact Factor: 7.17)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Multiple Intercollegiate Project Competitions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-info" data-aos="fade-left" data-aos-delay="400">
+                    <div class="info-cards">
+                        <div class="info-card education-card">
+                            <div class="card-header">
+                                <i class="fas fa-university"></i>
+                                <h3>Education</h3>
+                            </div>
+                            <div class="education-timeline">
+                                <div class="edu-item">
+                                    <div class="edu-year">2025 - 2027</div>
+                                    <div class="edu-details">
+                                        <h4>Master of Computer Applications</h4>
+                                        <p>MIT World Peace University</p>
+                                        <span class="status">Currently Pursuing</span>
+                                    </div>
+                                </div>
+                                <div class="edu-item">
+                                    <div class="edu-year">2022 - 2025</div>
+                                    <div class="edu-details">
+                                        <h4>Bachelor of Science in Computer Science</h4>
+                                        <p>Dr. D. Y. Patil Vidyapeeth</p>
+                                        <span class="grade">CGPA: 7.89</span>
+                                    </div>
+                                </div>
+                                <div class="edu-item">
+                                    <div class="edu-year">2019 - 2021</div>
+                                    <div class="edu-details">
+                                        <h4>12th Grade - Science Stream</h4>
+                                        <p>Jaikranti College of Science, Latur</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-card skills-card">
+                            <div class="card-header">
+                                <i class="fas fa-code"></i>
+                                <h3>Core Skills</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="skill-category">
+                                    <h4>Frontend</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">React.js</span>
+                                        <span class="skill-tag">JavaScript</span>
+                                        <span class="skill-tag">HTML5</span>
+                                        <span class="skill-tag">CSS3</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Backend</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Java</span>
+                                        <span class="skill-tag">Spring Boot</span>
+                                        <span class="skill-tag">PHP</span>
+                                        <span class="skill-tag">Python</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Cloud & Data</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">AWS</span>
+                                        <span class="skill-tag">MySQL</span>
+                                        <span class="skill-tag">PostgreSQL</span>
+                                        <span class="skill-tag">Kafka</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="text-align: left;">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">
+                    Virtual experiences with industry leaders that shaped my technical expertise
+                </p>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-date">July 2025</div>
+                    <div class="timeline-content">
+                        <div class="company-info">
+                            <div class="company-logo jpmorgan">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Software Engineering Virtual Experience</h3>
+                                <h4>JPMorgan Chase & Co.</h4>
+                                <span class="duration">1 Month Program</span>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Gained hands-on experience with enterprise-level software development practices, 
+                            focusing on modern backend technologies and financial system architecture.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Project setup and development environment configuration</li>
+                            <li>Kafka integration for real-time data streaming</li>
+                            <li>H2 database implementation and management</li>
+                            <li>REST API development and testing</li>
+                            <li>Spring Boot controller layer design</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">H2 Database</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="experience-certificate">
+                            <a href="./assets/certificates/JPMorgan_Software_Engineering_Certificate.pdf" class="certificate-link" target="_blank">
+                                <i class="fas fa-certificate"></i>
+                                View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-date">March 2025</div>
+                    <div class="timeline-content">
+                        <div class="company-info">
+                            <div class="company-logo deloitte">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Data Engineer Virtual Simulation</h3>
+                                <h4>Deloitte</h4>
+                                <span class="duration">1 Month Program</span>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Participated in comprehensive data engineering simulation focusing on business analytics, 
+                            trend analysis, and consulting frameworks used in real-world projects.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Business data analysis and interpretation</li>
+                            <li>Trend identification and pattern recognition</li>
+                            <li>Implementation of analytical frameworks</li>
+                            <li>Data-driven decision making processes</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Business Intelligence</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                        <div class="experience-certificate">
+                            <a href="./assets/certificates/Deloitte_Data_Analytics_Certificate.pdf" class="certificate-link" target="_blank">
+                                <i class="fas fa-certificate"></i>
+                                View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-date">December 2024</div>
+                    <div class="timeline-content">
+                        <div class="company-info">
+                            <div class="company-logo aws">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>AWS Solutions Architecture</h3>
+                                <h4>Amazon Web Services</h4>
+                                <span class="duration">1 Month Program</span>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Comprehensive virtual simulation covering cloud architecture fundamentals, 
+                            scalable system design, and AWS best practices for enterprise solutions.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Scalable cloud hosting design and implementation</li>
+                            <li>AWS infrastructure insights and optimization</li>
+                            <li>Security frameworks and compliance</li>
+                            <li>Enterprise-level cloud solution architecture</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Cloud Architecture</span>
+                            <span class="tech-tag">Scalable Systems</span>
+                        </div>
+                        <div class="experience-certificate">
+                            <a href="./assets/certificates/AWS_Solutions_Architecture_Certificate.pdf" class="certificate-link" target="_blank">
+                                <i class="fas fa-certificate"></i>
+                                View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificates Section -->
+            <div class="certificates-section" data-aos="fade-up" data-aos-delay="400">
+                <div class="section-header" style="text-align: left;">
+                    <h3 class="certificates-title">
+                        <i class="fas fa-certificate"></i>
+                        Achievements & Certifications
+                    </h3>
+                    <p class="certificates-subtitle">
+                        Recognition for research contributions and academic excellence
+                    </p>
+                </div>
+                
+                <div class="certificates-grid">
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="certificate-image">
+                            <img src="./assets/certificates/IJRAR_Research_Certificate.jpg" alt="IJRAR Research Publication Certificate">
+                            <div class="certificate-overlay">
+                                <div class="certificate-actions">
+                                    <a href="./assets/certificates/IJRAR_Research_Certificate.jpg" class="cert-link view-cert" target="_blank" aria-label="View Certificate">
+                                        <i class="fas fa-eye"></i>
+                                        <span>View</span>
+                                    </a>
+                                    <a href="./assets/certificates/IJRAR_Research_Paper.pdf" class="cert-link download-cert" target="_blank" aria-label="Download Research Paper">
+                                        <i class="fas fa-download"></i>
+                                        <span>Paper</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-content">
+                            <h4 class="certificate-title">Research Publication Certificate</h4>
+                            <p class="certificate-issuer">International Journal of Research and Analytical Reviews (IJRAR)</p>
+                            <p class="certificate-description">
+                                "Automated Waste Garbage Separation using Arduino and Sensors" - Published research paper 
+                                with Impact Factor 7.17, contributing to environmental technology solutions.
+                            </p>
+                            <div class="certificate-details">
+                                <span class="cert-badge">Impact Factor: 7.17</span>
+                                <span class="cert-badge">Published 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="certificate-content resume-card">
+                            <div class="resume-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="certificate-title">Java with DSA Certification</h4>
+                            <p class="certificate-description">
+                                Comprehensive certification in Java programming with Data Structures and Algorithms, 
+                                covering advanced programming concepts and problem-solving techniques.
+                            </p>
+                            <div class="resume-actions">
+                                <a href="./assets/certificates/Java_DSA_Certification.pdf" class="resume-btn view-resume" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Individual Certificate Cards -->
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="800">
+                        <div class="certificate-content resume-card">
+                            <div class="resume-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4 class="certificate-title">TechXplore-2025 Project Competition</h4>
+                            <p class="certificate-issuer">Dr. D.Y. Patil ACS College, Pimpri</p>
+                            <p class="certificate-description">
+                                Participated in TechXplore-2025 Intercollegiate Project Competition organized by the 
+                                Department of Computer Science. Showcased innovative technical solutions and competed 
+                                with students from various colleges across the region.
+                            </p>
+                            <div class="certificate-details">
+                                <span class="cert-badge">February 2025</span>
+                                <span class="cert-badge">Project Competition</span>
+                            </div>
+                            <div class="resume-actions">
+                                <a href="./assets/certificates/TechXplore_2025_Certificate.jpg" class="resume-btn view-resume" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="850">
+                        <div class="certificate-content resume-card">
+                            <div class="resume-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="certificate-title">HTML, CSS & JavaScript Course</h4>
+                            <p class="certificate-issuer">Sai Computer Education Centre</p>
+                            <p class="certificate-description">
+                                Completed a comprehensive short-term course in HTML, CSS, Bootstrap & JavaScript 
+                                from 11th February to 16th March 2023. Gained foundational skills in front-end 
+                                web development and responsive design principles.
+                            </p>
+                            <div class="certificate-details">
+                                <span class="cert-badge">March 2023</span>
+                                <span class="cert-badge">Web Development</span>
+                            </div>
+                            <div class="resume-actions">
+                                <a href="./assets/certificates/HTML_CSS_JS_Short_Term_Course_Certificate.jpg" class="resume-btn view-resume" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="900">
+                        <div class="certificate-content resume-card">
+                            <div class="resume-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4 class="certificate-title">Avishkar-2023 Zonal Research Competition</h4>
+                            <p class="certificate-issuer">Savitribai Phule Pune University</p>
+                            <p class="certificate-description">
+                                Participated in Avishkar-2023 Zonal Level Research Project Competition in the 
+                                Engineering & Technology category. Presented innovative research work at T.J. College, 
+                                Pune, competing at the university zonal level.
+                            </p>
+                            <div class="certificate-details">
+                                <span class="cert-badge">October 2023</span>
+                                <span class="cert-badge">Research Competition</span>
+                            </div>
+                            <div class="resume-actions">
+                                <a href="./assets/certificates/Avishkar_2023_Zonal_Level_Certificate.jpg" class="resume-btn view-resume" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="950">
+                        <div class="certificate-content resume-card">
+                            <div class="resume-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4 class="certificate-title">Abasaheb Garware Project Competition</h4>
+                            <p class="certificate-issuer">Abasaheb Garware College, Pune</p>
+                            <p class="certificate-description">
+                                Participated in Intercollegiate Project Competition organized by the Department of 
+                                Computer Science, Abasaheb Garware College. Demonstrated technical skills and 
+                                project development capabilities as a first-year student.
+                            </p>
+                            <div class="certificate-details">
+                                <span class="cert-badge">March 2023</span>
+                                <span class="cert-badge">Intercollegiate</span>
+                            </div>
+                            <div class="resume-actions">
+                                <a href="./assets/certificates/Abasaheb_Garware_Project_Certificate.jpg" class="resume-btn view-resume" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-aos="zoom-in" data-aos-delay="1000">
+                        <div class="certificate-content resume-card">
+                            <div class="resume-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h4 class="certificate-title">SAVOIR-FAIRE Byte Battle 2024</h4>
+                            <p class="certificate-issuer">Dr. D.Y. Patil Institute of Management & Research</p>
+                            <p class="certificate-description">
+                                Achieved 2nd Runner-up position in SAVOIR-FAIRE Intercollegiate Case Study Competition, 
+                                specifically in the BYTE BATTLE (BIZ EXPLORE CHALLENGE) category. Demonstrated 
+                                exceptional analytical and problem-solving skills.
+                            </p>
+                            <div class="certificate-details">
+                                <span class="cert-badge">2024</span>
+                                <span class="cert-badge">2nd Runner-up</span>
+                            </div>
+                            <div class="resume-actions">
+                                <a href="./assets/certificates/Savoir_Faire_Byte_Battle_2024_Certificate.jpg" class="resume-btn view-resume" target="_blank">
+                                    <i class="fas fa-eye"></i>
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    A showcase of innovative solutions that demonstrate my technical expertise
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="./assets/images/Veer-sahayata.png" alt="Veer Sahayata - Defence Welfare Portal">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Parths01/veer-sahayata" class="project-link" aria-label="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/Parths01/veer-sahayata" class="project-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Veer Sahayata - Defence Welfare Portal</h3>
+                            <span class="project-type">Full Stack Web Application</span>
+                        </div>
+                        <p class="project-description">
+                            A comprehensive web portal designed for Indian Defence personnel and their families, 
+                            providing seamless access to essential services including pension tracking, news updates, 
+                            document verification, and educational support resources.
+                        </p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Interactive dashboard with real-time data visualization</li>
+                                <li>Secure user authentication and role-based access</li>
+                                <li>Document management and verification system</li>
+                                <li>Responsive design for all devices</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">
+                                <i class="fas fa-check-circle"></i>
+                                Completed v2.0.0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="./assets/images/MediSync.png" alt="MediSync - Healthcare Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Parths01/MediSync" class="project-link" aria-label="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/Parths01/MediSync" class="project-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">MediSync - Healthcare Dashboard</h3>
+                            <span class="project-type">Data Analytics Platform</span>
+                        </div>
+                        <p class="project-description">
+                            An intelligent healthcare analytics dashboard that tracks patient metrics, generates 
+                            actionable insights, and integrates with multiple data sources to provide real-time 
+                            healthcare analytics for medical professionals.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Excel Integration</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">
+                                <i class="fas fa-check-circle"></i>
+                                Completed
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="./assets/images/Oneshot.png" alt="OneShot - Disposable Online Camera">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Parths01/disposable-camera" class="project-link" aria-label="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/Parths01/disposable-camera" class="project-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">OneShot - Disposable Online Camera</h3>
+                            <span class="project-type">Web Application</span>
+                        </div>
+                        <p class="project-description">
+                            An innovative time-limited media sharing platform that enables 24-hour access with 
+                            role-based uploads and admin controls, creating a unique ephemeral sharing experience 
+                            similar to disposable cameras.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">
+                                <i class="fas fa-check-circle"></i>
+                                Completed
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card research" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="./assets/images/Automated Waste Garbage Separation.jpg" alt="IoT Waste Management System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="./assets/certificates/IJRAR_Research_Certificate.jpg" class="project-link" aria-label="Research Certificate">
+                                    <i class="fas fa-award"></i>
+                                </a>
+                                <a href="./assets/certificates/IJRAR_Research_Paper.pdf" class="project-link" aria-label="Research Paper">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Automated Waste Separation System</h3>
+                            <span class="project-type">IoT Research Project</span>
+                        </div>
+                        <p class="project-description">
+                            An intelligent waste management system using Arduino and sensors for automated garbage 
+                            separation and monitoring. Published research paper in IJRAR with Impact Factor 7.17, 
+                            featuring servo motor automation and real-time monitoring capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">IoT Sensors</span>
+                            <span class="tech-tag">Servo Motors</span>
+                            <span class="tech-tag">C++</span>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge published">
+                                <i class="fas fa-journal-whills"></i>
+                                Published Research
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">
+                    Ready to bring your ideas to life? Let's connect and create something amazing together.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-text">
+                        <h3>Let's Start a Conversation</h3>
+                        <p>
+                            I'm always excited to discuss new opportunities, collaborate on innovative projects, 
+                            or simply have a conversation about technology and development. Whether you're looking 
+                            for a dedicated developer, have a project in mind, or want to connect professionally, 
+                            I'd love to hear from you.
+                        </p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Email</h4>
+                                <p>parthsuryawanshi001@gmail.com</p>
+                                <a href="mailto:parthsuryawanshi001@gmail.com" class="method-link">Send Email</a>
+                            </div>
+                        </div>
+                        
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>LinkedIn</h4>
+                                <p>Connect with me professionally</p>
+                                <a href="https://www.linkedin.com/in/parthsuryawanshi" class="method-link">View Profile</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Location</h4>
+                                <p>Pune, Maharashtra, India</p>
+                                <span class="method-link">Available for Remote Work</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="availability">
+                        <div class="availability-status">
+                            <div class="status-indicator"></div>
+                            <span>Currently available for internships and projects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" data-aos="fade-left" data-aos-delay="400">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Parth Suryawanshi. Designed & Developed with <i class="fas fa-heart"></i> using modern web technologies.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
