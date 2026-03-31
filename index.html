@@ -9,11 +9,11 @@
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <style>
 :root{
-  --bg:#05081a;--bg2:#080d24;--surf:#0e1430;--card:#111829;
-  --cyan:#00d4ff;--purple:#a855f7;--pink:#f472b6;--green:#10b981;
-  --text:#e2e8f0;--muted:#64748b;--border:rgba(0,212,255,0.1);
-  --grad:linear-gradient(135deg,#00d4ff,#a855f7);
-  --grad2:linear-gradient(135deg,#a855f7,#f472b6);
+  --bg:#0c0a09;--bg2:#111008;--surf:#1c1610;--card:#201a0f;
+  --cyan:#f97316;--purple:#fbbf24;--pink:#fb923c;--green:#10b981;
+  --text:#fef3e2;--muted:#78716c;--border:rgba(249,115,22,0.12);
+  --grad:linear-gradient(135deg,#f97316,#fbbf24);
+  --grad2:linear-gradient(135deg,#fbbf24,#fb923c);
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -211,27 +211,144 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);background:var(--bg2);
 .res-drop a .badge{font-size:.6rem;padding:.15rem .45rem;background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.25);color:var(--purple);letter-spacing:.06em}
 
 /* RESPONSIVE */
+/* ── 1200px LAPTOP ── */
+@media(max-width:1200px){
+  #hero{gap:2.5rem;padding:80px 4% 0}
+  .bento{grid-template-columns:repeat(10,1fr)}
+  .b1{grid-column:span 5;grid-row:span 2}
+  .b2{grid-column:span 5}
+  .b3{grid-column:span 5}
+  .b4{grid-column:span 5}
+  .b5{grid-column:span 5}
+  .b6{grid-column:span 6}
+  .b7{grid-column:span 4}
+  .b8{grid-column:span 6}
+}
+
+/* ── 900px TABLET ── */
 @media(max-width:900px){
-  #hero{grid-template-columns:1fr;padding-top:100px}
+  nav{padding:0 4%}
+  .nav-links{gap:1.4rem}
+  section{padding:80px 4%}
+
+  /* Hero: single column, hide right panel */
+  #hero{grid-template-columns:1fr;padding:90px 4% 60px;min-height:auto;gap:2rem;text-align:center}
+  .hero-left{display:flex;flex-direction:column;align-items:center}
+  .hero-bio{max-width:560px;text-align:center}
+  .hero-actions{justify-content:center}
   .hero-right{display:none}
-  .bento{grid-template-columns:1fr 1fr}
-  .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{grid-column:span 2}
-  .contact-split{grid-template-columns:1fr}
+  .scroll-cue{display:none}
+
+  /* Stats: 2×2 grid */
   .strip-inner{grid-template-columns:repeat(2,1fr)}
   .strip-item:nth-child(2){border-right:none}
   .strip-item:nth-child(3){border-top:1px solid var(--border)}
+  .strip-item:nth-child(4){border-top:1px solid var(--border)}
+
+  /* Bento: 2 columns */
+  .bento{grid-template-columns:1fr 1fr}
+  .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{grid-column:span 1;grid-row:span 1}
+  .b1{grid-column:span 2}
+
+  /* Projects: hide link column */
+  .proj-links-col{display:none}
+  .proj-row{grid-template-columns:auto 1fr;gap:1.2rem;padding:1.6rem 0}
+
+  /* Timeline: 2-col grid */
+  .htl{grid-template-columns:1fr 1fr}
+  .htl-item{border-right:none;border-bottom:1px solid var(--border)}
+  .htl-item:nth-child(even){border-right:none}
+  .htl-item:last-child{border-bottom:none}
+  .htl::before{display:none}
+
+  /* Contact: single column */
+  .contact-split{grid-template-columns:1fr}
+  .contact-left,.contact-right{padding:60px 6%}
+  .contact-left{min-height:auto}
 }
+
+/* ── 640px LARGE PHONE ── */
 @media(max-width:640px){
-  section{padding:70px 5%}
-  .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:1.5rem;border-bottom:1px solid var(--border);gap:1rem}
+  nav{padding:0 5%}
+
+  /* Nav: hamburger menu */
+  .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:1.2rem 5%;border-bottom:1px solid var(--border);gap:.9rem;z-index:999}
   .nav-links.open{display:flex}
   .burger{display:flex}
-  .bento{grid-template-columns:1fr}
-  .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{grid-column:span 1}
-  .proj-row{grid-template-columns:auto 1fr;display:grid}
-  .proj-links-col{display:none}
-  .htl{grid-template-columns:1fr 1fr}
+  .res-wrap#navResWrap{margin-left:auto}
+
+  section{padding:60px 5%}
+
+  /* Hero */
+  #hero{padding:80px 5% 50px;text-align:left}
+  .hero-left{align-items:flex-start}
+  .hero-bio{text-align:left;max-width:100%}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:.8rem}
+  .btn-primary,.btn-ghost{text-align:center;justify-content:center}
+  .res-wrap#heroResWrap{width:100%}
+  .res-wrap#heroResWrap button{width:100%;justify-content:center}
+
+  /* Stats: 2×2 */
   .strip-inner{grid-template-columns:repeat(2,1fr)}
+  .strip-item{padding:1.4rem 1rem}
+  .strip-num{font-size:2.2rem}
+
+  /* Bento: single column */
+  .bento{grid-template-columns:1fr}
+  .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{grid-column:span 1;grid-row:span 1}
+
+  /* Projects */
+  .proj-row{display:flex;flex-direction:column;gap:.6rem;padding:1.4rem 0}
+  .proj-num{font-size:.9rem}
+  .proj-title-big{font-size:1.15rem}
+  .proj-desc-row,.proj-links-col{display:none}
+  .proj-badges{margin-top:.2rem}
+
+  /* Timeline: single column */
+  .htl{grid-template-columns:1fr}
+  .htl-item{border-bottom:1px solid var(--border);border-right:none;padding:2.5rem 1rem 1.5rem}
+  .htl-item:last-child{border-bottom:none}
+
+  /* Contact */
+  .contact-left,.contact-right{padding:50px 5%}
+  .contact-left h2{font-size:2rem}
+
+  /* Floating dropdown */
+  .res-wrap.float-wrap{bottom:1.2rem;left:1.2rem}
+  #btt{bottom:1.2rem;right:1.2rem;width:38px;height:38px}
+  .res-drop{min-width:180px}
+}
+
+/* ── 480px SMALL PHONE ── */
+@media(max-width:480px){
+  :root{--nav:56px}
+  h1.hero-h1{font-size:clamp(2.2rem,10vw,3.2rem)}
+  h2.sh{font-size:clamp(1.7rem,7vw,2.4rem);margin-bottom:2rem}
+  .hero-chip{font-size:.62rem;letter-spacing:.1em}
+  .hero-role{font-size:.88rem}
+
+  .strip-inner{grid-template-columns:1fr 1fr}
+  .strip-item{padding:1.2rem .8rem}
+  .strip-num{font-size:1.9rem}
+  .strip-lbl{font-size:.65rem}
+
+  .bento-cell{padding:1.3rem}
+  .bento-cell h3{font-size:1.2rem}
+  .big-num{font-size:3rem}
+
+  .proj-row{padding:1.2rem 0}
+  .proj-title-big{font-size:1rem}
+
+  .contact-left h2{font-size:1.7rem}
+  .contact-left,.contact-right{padding:40px 5%}
+  .cform{gap:1.1rem}
+  .btn-send{width:100%;text-align:center}
+
+  .res-wrap.float-wrap{left:.8rem;bottom:.8rem}
+  #btt{right:.8rem;bottom:.8rem;width:36px;height:36px;font-size:.8rem}
+
+  footer{flex-direction:column;text-align:center;gap:.7rem;padding:1.5rem 5%}
+  .foot-links{flex-wrap:wrap;justify-content:center;gap:1rem}
 }
 </style>
 </head>
@@ -413,7 +530,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);background:var(--bg2);
           <div class="proj-stack-row">Java 17 · Spring Boot 3.2 · Spring Security · JPA/Hibernate · MySQL 8 · JWT</div>
           <div class="proj-badges"><span class="pbadge">Enterprise</span><span class="pbadge">Java</span><span class="pbadge">Spring Boot</span></div>
         </div>
-        <div class="proj-links-col"><a href="https://github.com/Parths01" target="_blank" class="plink">↗ GitHub</a></div>
+        <div class="proj-links-col"><a href="https://github.com/Parths01/LEGAL-CASE-MANAGEMENT-SYSTEM" target="_blank" class="plink">↗ GitHub</a></div>
       </div>
 
       <div class="proj-row" data-aos="fade-up" data-aos-delay="120">

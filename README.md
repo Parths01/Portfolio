@@ -1,180 +1,140 @@
-# 🌐 Parth Suryawanshi — Personal Portfolio Website
+# Parth Suryawanshi — Portfolio
 
-A modern, fully responsive personal portfolio website built with **HTML5**, **CSS3**, and **JavaScript**. Features dark/light theme toggle, smooth AOS animations, glassmorphism design, and a professional showcase of projects, experience, and certifications.
+> Personal portfolio website of **Parth Suryawanshi**, Full Stack Developer & MCA Student at MIT World Peace University, Pune.
 
-🔗 **Live Site:** [parths01.github.io/Portfolio](https://parths01.github.io/Portfolio/)
+🌐 **Live:** [parths01.github.io/Portfolio](https://parths01.github.io/Portfolio/)
 
 ---
 
-## 👨‍💻 About Me
+## 👤 About
 
-| Field | Details |
+| Field | Detail |
 |---|---|
 | **Name** | Parth Suryawanshi |
-| **Role** | Full Stack Developer & Tech Enthusiast |
+| **Role** | Full Stack Developer · Java Engineer · React Developer |
+| **Education** | MCA – MIT World Peace University, Pune (2025–2027) |
+| **Previous** | B.Sc. Computer Science – Dr. D. Y. Patil ACS College (CGPA 7.89) |
 | **Email** | parthsuryawanshi001@gmail.com |
 | **Phone** | +91 8459471544 |
-| **Location** | Pune, Maharashtra, India |
-| **LinkedIn** | [linkedin.com/in/parthsuryawanshi](https://www.linkedin.com/in/parthsuryawanshi) |
 | **GitHub** | [github.com/Parths01](https://github.com/Parths01) |
-| **Availability** | Open for Internships & Projects |
-
-I'm an MCA student at **MIT World Peace University**, passionate about building scalable web applications with React.js, Java, and AWS. I have hands-on virtual experience with **JPMorgan Chase**, **AWS**, and **Deloitte**, and a strong foundation in both frontend and backend development.
+| **LinkedIn** | [linkedin.com/in/parthsuryawanshi](https://www.linkedin.com/in/parthsuryawanshi) |
 
 ---
 
-## 🎓 Education
+## 🎨 Design System
 
-| Degree | Institution | Year | Result |
+### Theme — Sunset Warm
+
+| Token | Value | Role |
+|---|---|---|
+| Background | `#0c0a09` | Page base — warm near-black |
+| Surface | `#1c1610` | Nav, cards |
+| Card | `#201a0f` | Bento cells, project rows |
+| Primary Accent | `#f97316` | Burnt orange — buttons, active links |
+| Secondary Accent | `#fbbf24` | Amber gold — gradient end, stat numbers |
+| Text | `#fef3e2` | Warm cream body text |
+| Muted | `#78716c` | Labels, descriptions |
+| Gradient | `#f97316 → #fbbf24` | Buttons, headings, preloader bar |
+
+### Typography
+
+| Family | Usage |
+|---|---|
+| **Syne** (800) | Page title, section headings |
+| **Space Grotesk** (300–700) | Body copy, nav, buttons |
+| **JetBrains Mono** | Section labels, typed role, code elements |
+
+---
+
+## 🗂️ Sections
+
+### 1. Hero
+- **Availability chip** with live blinking dot
+- Giant gradient name heading (Syne 800)
+- Typed.js cycling roles: Full Stack Developer → Java Spring Engineer → React Developer → Problem Solver → Open Source Enthusiast
+- Bio paragraph
+- Two CTAs: **View My Work** + **Download Resume ▾** (role dropdown)
+- Right panel (desktop): floating info cards — Currently Building, Core Proficiency bars, Quick Stats
+- Scroll indicator with animated wheel
+
+### 2. Stats Strip
+| Stat | Value |
+|---|---|
+| Projects Built | 6+ |
+| Certifications | 13+ |
+| Virtual Programs | 3 |
+| CGPA (BSc CS) | 7+ |
+
+Animated with CountUp.js on scroll entry.
+
+### 3. Skills — Bento Grid
+Mosaic grid layout, 8 cells covering:
+- **Frontend** — React.js, JavaScript, HTML5, CSS3, Tailwind, Bootstrap
+- **Backend** — Java 17, Spring Boot, Spring Security, REST APIs, PHP
+- **Research** — IJRAR Impact Factor 7.17
+- **Cloud & Data** — AWS, MySQL, PostgreSQL, MongoDB, Kafka
+- **Education** — MCA, MIT WPU, 2025–2027
+- **Tools & DevOps** — Git, Docker, Linux, Maven, Postman, VS Code
+- **CS Fundamentals** — Data Structures, Algorithms, C++, Python, Django
+- **Virtual Experience** — JPMorgan Chase, Deloitte, AWS simulations
+
+### 4. Projects — Numbered List
+
+| # | Project | Stack | Link |
 |---|---|---|---|
-| **MCA** (Master of Computer Applications) | MIT World Peace University, Pune | 2025 – 2027 | Pursuing |
-| **B.Sc. Computer Science** | Dr. D. Y. Patil ACS College | 2022 – 2025 | CGPA: 7.89 |
+| 01 | **Skillnex — AI-Powered LMS** | React 18, Spring Boot, MySQL, Gemini API | [GitHub](https://github.com/Parths01/Skillnex) |
+| 02 | **Smart Legal Case Management System** | Java 17, Spring Boot 3.2, Spring Security, JWT, MySQL | [GitHub](https://github.com/Parths01/LEGAL-CASE-MANAGEMENT-SYSTEM) |
+| 03 | **Veer Sahayata — Defence Welfare Portal** | React.js, PHP, MySQL, Chart.js | [GitHub](https://github.com/Parths01/veer-sahayata) |
+| 04 | **MediSync — Healthcare Dashboard** | PHP, JavaScript, MySQL | [GitHub](https://github.com/Parths01/MediSync) |
+| 05 | **OneShot — Disposable Online Camera** | PHP, MySQL, JavaScript | [GitHub](https://github.com/Parths01/disposable-camera) |
+| 06 | **Automated Waste Separation System** | Arduino, IoT Sensors, C++ | Published in IJRAR |
+
+### 5. Journey — Horizontal Timeline
+
+| Period | Event | Organisation |
+|---|---|---|
+| 2025–2027 | MCA | MIT World Peace University |
+| Jul 2025 | Software Engineering Virtual Experience | JPMorgan Chase & Co. |
+| Mar 2025 | Data Engineer Simulation | Deloitte |
+| Dec 2024 | AWS Solutions Architecture | Amazon Web Services |
+| 2022–2025 | B.Sc. Computer Science | Dr. D. Y. Patil ACS College |
+
+### 6. Contact — Split Layout
+- **Left** — Aurora gradient panel: availability status, headline, bio, social links (GitHub, LinkedIn, Email, Phone)
+- **Right** — Dark form: Name, Email, Message, Send button
 
 ---
 
-## 🏆 Achievements
+## ✨ Features & Animations
 
-- 🥇 **1st Rank** — Avishkar Research Competition (Pune College Level / Zonal Level)
-- 🥉 **2nd Runner-up** — SAVOIR-FAIRE Competition (Byte Battle 2024)
-- 📄 **Published Research Paper** — *"Automated Waste Garbage Separation using Arduino and Sensors"* in **IJRAR** (Impact Factor: **7.17**)
-- 🏅 **Multiple Intercollegiate Project Competition** participations
-- 📊 **CGPA: 7.89** — B.Sc. Computer Science
-
----
-
-## 💼 Virtual Experience / Internships
-
-### 🏦 JPMorgan Chase & Co. — Software Engineering Virtual Experience
-**July 2025**
-- Kafka integration for real-time data streaming
-- H2 database implementation and management
-- REST API development and testing
-- Spring Boot controller layer design
-- **Tech:** Spring Boot · Kafka · H2 Database · REST API
-
-### 📊 Deloitte — Data Engineer Virtual Simulation
-**March 2025**
-- Business data analysis and interpretation
-- Trend identification and pattern recognition
-- Implementation of analytical frameworks
-- Data-driven decision making processes
-- **Tech:** Data Analysis · Business Intelligence · Analytics
-
-### ☁️ Amazon Web Services — AWS Solutions Architecture
-**December 2024**
-- Scalable cloud hosting design
-- AWS infrastructure optimization
-- Security frameworks and compliance
-- Enterprise-level cloud solutions
-- **Tech:** AWS · Cloud Architecture · Scalable Systems
-
----
-
-## 🚀 Featured Projects
-
-### 1. 🛡️ Veer Sahayata — Defence Welfare Portal *(Full Stack · Completed v2.0.0)*
-> Comprehensive web portal for Indian Defence personnel providing seamless access to pension tracking, news updates, document verification, and educational support.
-
-- Interactive dashboard with data visualization
-- Secure authentication and role-based access
-- Document management system
-- Fully responsive design
-- **Tech Stack:** React.js · PHP · MySQL · Chart.js
-- 🔗 [GitHub](https://github.com/Parths01/veer-sahayata)
-
----
-
-### 2. 🏥 MediSync — Healthcare Dashboard *(Analytics · Completed)*
-> Intelligent healthcare analytics dashboard for tracking patient metrics and generating actionable insights with real-time analytics.
-
-- **Tech Stack:** PHP · JavaScript · MySQL
-- 🔗 [GitHub](https://github.com/Parths01/MediSync)
-
----
-
-### 3. 📷 OneShot — Disposable Online Camera *(Web App · Completed)*
-> Innovative time-limited media sharing platform with 24-hour access and role-based uploads, creating a unique ephemeral sharing experience.
-
-- **Tech Stack:** PHP · MySQL · JavaScript
-- 🔗 [GitHub](https://github.com/Parths01/disposable-camera)
-
----
-
-### 4. ♻️ Automated Waste Separation System *(IoT Research · Published)*
-> Intelligent waste management system using Arduino and sensors for automated garbage separation. Research published in IJRAR.
-
-- **Tech Stack:** Arduino · IoT Sensors · C++
-- 📄 Published in **IJRAR** — Impact Factor: 7.17
-
----
-
-### 5. 🎓 ERP System — College Management *(Enterprise · In Progress)*
-> Comprehensive college ERP with student & staff management, attendance, timetables, fee management, and reporting with role-based access control.
-
-- **Tech Stack:** Python · Django · SQLite
-- 🔗 [GitHub](https://github.com/CyberSherlock25/ERP--College-Management-System)
-
----
-
-### 6. ⚖️ Smart Legal Case Management System *(Enterprise · In Progress v1.0.0)*
-> Enterprise web application for digital legal operations — manages cases, deadlines, hearings, and users with role-based access control and comprehensive reporting.
-
-- **Tech Stack:** Java 17 · Spring Boot 3.2 · Spring Security · JPA/Hibernate · MySQL 8 · JWT
-
----
-
-## 🛠️ Technical Skills
-
-### Frontend
-`React.js` · `JavaScript (ES6+)` · `HTML5` · `CSS3` · `Bootstrap`
-
-### Backend
-`Java 17` · `Spring Boot` · `Spring Security` · `PHP` · `Python` · `Django`
-
-### Cloud & Data
-`AWS` · `MySQL` · `PostgreSQL` · `MongoDB` · `Apache Kafka` · `JPA & Hibernate`
-
-### Tools & DevOps
-`Git` · `Maven` · `Docker` · `Linux` · `REST APIs` · `Arduino`
-
----
-
-## 📜 Certifications & Courses
-
-| Certificate | Issuer |
+| Feature | Library / Method |
 |---|---|
-| Software Engineering Virtual Experience | JPMorgan Chase & Co. |
-| Data Engineer Virtual Simulation | Deloitte |
-| AWS Solutions Architecture | Amazon Web Services |
-| Java with DSA | Comprehensive Certification |
-| Networking Basics | Cisco Networking Academy |
-| TechXplore-2025 | Project Competition |
-| SAVOIR-FAIRE Byte Battle 2024 | 2nd Runner-up Certificate |
-| IJRAR Research Publication | International Journal |
-| Introduction to Programming using Java & DSA | — |
-| Development using HTML5 and JavaScript | — |
-| Learning Microsoft 365 Copilot | Microsoft |
-| Microsoft Copilot: The Art of Prompt Writing | Microsoft |
-| Deloitte Australia – Data Analytics Job Simulation | Forage |
-
-> 📊 **13+ Certificates** total
+| Preloader with name + loading bar | CSS animation |
+| Typewriter role cycling | Typed.js |
+| Hero entrance (staggered) | GSAP |
+| Scroll-reveal sections | AOS (Animate on Scroll) |
+| Animated stats counter | CountUp.js |
+| Horizontal timeline draw | GSAP ScrollTrigger |
+| Skill progress bars | CSS transform scaleX |
+| Frosted-glass sticky navbar | CSS backdrop-filter |
+| Resume role dropdown (3 variants) | Vanilla JS |
+| Back to top button | Scroll listener |
+| Floating resume button | Fixed position |
 
 ---
 
-## ✨ Portfolio Features
+## 📄 Resume Downloads
 
-| Feature | Description |
+Three role-specific resumes available via dropdown at:
+- **Navbar** "Resume ▾" button
+- **Hero** "Download Resume ▾" button
+- **Floating bottom-left** button
+
+| Role | File |
 |---|---|
-| 🎨 Modern Design | Glassmorphism, gradient orbs, clean professional layout |
-| 🌓 Dark/Light Theme | Toggle with smooth transition, saved in localStorage |
-| 📱 Fully Responsive | Optimized for mobile, tablet & desktop |
-| 🖱️ Custom Cursor | Subtle custom cursor effect |
-| 🔠 Typing Animation | Hero section rotates multiple text phrases |
-| 🎞️ AOS Animations | Scroll-triggered smooth reveal animations |
-| 📬 Contact Form | Client-side validation with success/error notifications |
-| ♿ Accessibility | Semantic HTML, keyboard nav, screen reader friendly |
-| ⚡ SEO Optimized | Meta tags & semantic HTML structure |
-| 🚀 Fast Loading | Optimized assets and efficient code |
+| Full Stack Developer | `assets/certificates/Parth_FullStack_Resume.docx` |
+| Java Developer | `assets/certificates/Parth_Java_Developer_Resume.docx` |
+| DBA | `assets/certificates/Parth_DBA_Resume.docx` |
 
 ---
 
@@ -182,130 +142,69 @@ I'm an MCA student at **MIT World Peace University**, passionate about building 
 
 ```
 Portfolio/
-├── index.html                        # Main HTML file
-├── assets/
-│   ├── css/
-│   │   └── style.css                 # Main stylesheet with themes
-│   ├── js/
-│   │   └── script.js                 # JavaScript functionality
-│   ├── images/
-│   │   ├── profile.jpg               # Profile photo
-│   │   ├── Veer-sahayata.png
-│   │   ├── MediSync.png
-│   │   ├── Oneshot.png
-│   │   ├── ERP.png
-│   │   ├── LegalCMS.png
-│   │   └── Automated Waste Garbage Separation.jpg
-│   └── certificates/
-│       ├── IJRAR_Research_Certificate.jpg
-│       ├── IJRAR_Research_Paper.pdf
-│       ├── JPMorgan_Software_Engineering_Certificate.pdf
-│       ├── Deloitte_Data_Analytics_Certificate.pdf
-│       ├── AWS_Solutions_Architecture_Certificate.pdf
-│       ├── Java_DSA_Certification.pdf
-│       ├── TechXplore_2025_Certificate.jpg
-│       ├── Savoir_Faire_Byte_Battle_2024_Certificate.jpg
-│       ├── Networking .png
-│       └── Parth Suryawanshi.pdf     # Resume
-└── README.md
-```
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5** — Semantic markup
-- **CSS3** — Grid, Flexbox, Custom Properties, Animations
-- **JavaScript** — ES6+, Intersection Observer, Local Storage
-- **Google Fonts** — Poppins, Playfair Display
-- **Font Awesome 6** — Icons
-- **AOS** — Animate On Scroll library
-
----
-
-## 🚀 Quick Start
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/Parths01/Portfolio.git
-
-# 2. Navigate to the folder
-cd Portfolio
-
-# 3. Open in browser
-open index.html
-```
-
-> No build step or server required — it's a pure static site.
-
----
-
-## 🌍 Deployment
-
-### GitHub Pages
-1. Push code to GitHub
-2. Go to **Settings > Pages**
-3. Select `main` branch → Save
-4. Live at: `https://parths01.github.io/Portfolio/`
-
-### Netlify / Vercel
-1. Connect GitHub repo
-2. Auto-deploys on every push
-3. Supports custom domain
-
----
-
-## 📧 Contact Form Setup
-
-The contact form validates client-side. To make it send real emails, integrate one of:
-
-- **[EmailJS](https://www.emailjs.com/)** — No backend required
-- **[Formspree](https://formspree.io/)** — Simple form endpoint
-- **[Netlify Forms](https://www.netlify.com/products/forms/)** — Netlify-native
-
-```javascript
-// Example: EmailJS integration in script.js
-emailjs.send('service_id', 'template_id', {
-    name: name,
-    email: email,
-    message: message
-}).then(() => {
-    showNotification('Message sent successfully!', 'success');
-});
+├── index.html                  # Single-file app (HTML + CSS + JS)
+├── README.md
+└── assets/
+    ├── images/                 # Profile photo, project screenshots
+    └── certificates/
+        ├── Parth_FullStack_Resume.docx
+        ├── Parth_Java_Developer_Resume.docx
+        ├── Parth_DBA_Resume.docx
+        ├── AWS_Solutions_Architecture_Certificate.pdf
+        ├── JPMorgan_Software_Engineering_Certificate.pdf
+        ├── Deloitte_Data_Analytics_Certificate.pdf
+        ├── Java_DSA_Certification.pdf
+        ├── IJRAR_Research_Paper.pdf
+        └── ...other certificates
 ```
 
 ---
 
 ## 📱 Responsive Breakpoints
 
-| Breakpoint | Range |
-|---|---|
-| Mobile | < 768px |
-| Tablet | 768px – 1024px |
-| Desktop | > 1024px |
+| Breakpoint | Target | Layout Changes |
+|---|---|---|
+| `≤ 1200px` | Laptop | Bento rebalances to 10-col |
+| `≤ 900px` | Tablet | Hero centers, contact stacks, 2×2 stats |
+| `≤ 640px` | Large phone | Hamburger nav, single-col bento, stacked CTAs |
+| `≤ 480px` | Small phone | Scaled-down type, footer wraps |
 
 ---
 
-## 📄 License
+## 🛠️ Tech Stack
 
-This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
+```
+HTML5 · CSS3 (Vanilla) · JavaScript (ES6+)
+GSAP 3 + ScrollTrigger
+Typed.js · AOS · CountUp.js
+Google Fonts (Syne, Space Grotesk, JetBrains Mono)
+```
+
+All dependencies loaded via CDN — **zero build step required**.
 
 ---
 
-## 🤝 Contributing
+## 🚀 Deployment
 
-Feel free to **fork** this project and customize it for your own use. If you make improvements, consider sharing them back via a pull request!
+### GitHub Pages
+1. Push to `main` branch of `Parths01/Portfolio`
+2. Go to **Settings → Pages → Source: main / root**
+3. Site available at `https://parths01.github.io/Portfolio/`
+
+### Netlify / Vercel
+Drag and drop the `Portfolio/` folder — instant deploy.
 
 ---
 
-<div align="center">
+## 📬 Contact Form
 
-**Built with ❤️ by Parth Suryawanshi**
+The form uses client-side validation. To enable real email delivery, integrate one of:
+- [EmailJS](https://www.emailjs.com/) — free, no backend needed
+- [Formspree](https://formspree.io/) — set `action` on `<form>`
+- [Netlify Forms](https://www.netlify.com/products/forms/) — add `netlify` attribute
 
-*© 2025 Parth Suryawanshi · Pune, Maharashtra, India*
+---
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/parthsuryawanshi)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/Parths01)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-green?style=flat&logo=globe)](https://parths01.github.io/Portfolio/)
+## 📜 License
 
-</div>
+MIT — free to use as a template with attribution appreciated.
