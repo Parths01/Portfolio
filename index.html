@@ -1,767 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parth Suryawanshi - Full Stack Developer</title>
-    <meta name="description" content="Parth Suryawanshi - Full Stack Developer specializing in React.js, Java, AWS, and enterprise solutions.">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parth Suryawanshi · Full Stack Developer</title>
+<meta name="description" content="Parth Suryawanshi — Full Stack Developer & Java Engineer, MCA at MIT World Peace University.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+:root{
+  --bg:#05081a;--bg2:#080d24;--surf:#0e1430;--card:#111829;
+  --cyan:#00d4ff;--purple:#a855f7;--pink:#f472b6;--green:#10b981;
+  --text:#e2e8f0;--muted:#64748b;--border:rgba(0,212,255,0.1);
+  --grad:linear-gradient(135deg,#00d4ff,#a855f7);
+  --grad2:linear-gradient(135deg,#a855f7,#f472b6);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;font-weight:300;overflow-x:hidden}
+
+
+
+/* PRELOADER */
+#preload{position:fixed;inset:0;background:var(--bg);z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
+.pre-text{font-family:'Syne',sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em}
+.pre-bar{width:200px;height:1px;background:var(--border);position:relative;overflow:hidden}
+.pre-fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--grad);animation:fillBar 1.3s ease forwards}
+@keyframes fillBar{to{width:100%}}
+#preload.done{opacity:0;pointer-events:none;transition:opacity .5s .2s}
+
+/* NOISE OVERLAY */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1;opacity:.4}
+
+/* BLOBS */
+.blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;animation:blobPulse 8s ease infinite alternate}
+@keyframes blobPulse{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.15) translate(20px,-20px)}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;height:64px;z-index:1000;display:flex;align-items:center;padding:0 5%;transition:all .4s}
+nav.scrolled{background:rgba(5,8,26,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;letter-spacing:-.02em}
+.nav-links{margin-left:auto;display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;transition:color .3s;position:relative}
+.nav-links a.active,.nav-links a:hover{color:var(--text)}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--grad);transition:width .3s}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-btn{margin-left:1.5rem;padding:.45rem 1.2rem;background:var(--grad);color:#fff;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-weight:500;transition:opacity .3s}
+.nav-btn:hover{opacity:.85}
+.burger{display:none;flex-direction:column;gap:5px;margin-left:1rem}
+.burger span{width:20px;height:1px;background:var(--text)}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px 5% 0;position:relative;overflow:hidden;gap:4rem}
+.hero-blob1{width:500px;height:500px;background:rgba(0,212,255,.07);top:-100px;left:-100px}
+.hero-blob2{width:400px;height:400px;background:rgba(168,85,247,.08);bottom:-50px;right:50px;animation-delay:3s}
+.hero-left{position:relative;z-index:2}
+.hero-chip{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;border:1px solid var(--border);background:rgba(0,212,255,.05);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.5rem;opacity:0;transform:translateY(20px)}
+.hero-chip-dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+h1.hero-h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.8rem,5.5vw,5.5rem);line-height:1.02;letter-spacing:-.03em;color:var(--text);margin-bottom:1rem;opacity:0;transform:translateY(40px)}
+.grad-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-role{font-family:'JetBrains Mono',monospace;font-size:1rem;color:var(--cyan);margin-bottom:1.4rem;opacity:0;min-height:1.4rem}
+.hero-bio{font-size:.95rem;color:var(--muted);line-height:1.8;max-width:440px;margin-bottom:2.4rem;opacity:0;transform:translateY(20px)}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;transform:translateY(20px)}
+.btn-primary{padding:.85rem 2rem;background:var(--grad);color:#fff;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;font-weight:500;position:relative;overflow:hidden;transition:opacity .3s,transform .3s;display:inline-block}
+.btn-primary::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.08);transform:translateX(-100%);transition:.4s}
+.btn-primary:hover::after{transform:translateX(100%)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{padding:.85rem 2rem;border:1px solid rgba(0,212,255,.3);color:var(--cyan);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .3s}
+.btn-ghost:hover{background:rgba(0,212,255,.08);border-color:var(--cyan);transform:translateY(-2px)}
+
+/* HERO RIGHT — floating card */
+.hero-right{position:relative;z-index:2;display:flex;flex-direction:column;gap:1.2rem;opacity:0;transform:translateX(40px)}
+.h-card{background:rgba(14,20,48,.7);border:1px solid var(--border);backdrop-filter:blur(10px);padding:1.4rem 1.6rem;transition:border-color .3s,transform .4s}
+.h-card:hover{border-color:rgba(0,212,255,.3);transform:translateX(-4px)}
+.h-card-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.h-card-value{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text)}
+.h-card-value span{color:var(--cyan)}
+.stat-bars{display:flex;flex-direction:column;gap:.5rem;margin-top:.6rem}
+.sbar{display:flex;align-items:center;gap:.8rem;font-size:.75rem;color:var(--muted)}
+.sbar-inner{flex:1;height:2px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
+.sbar-fill{height:100%;border-radius:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform 1.2s ease}
+.sbar-fill.go{transform:scaleX(1)}
+.h-card-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem}
+.ctag{font-size:.68rem;padding:.2rem .6rem;background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.2);color:var(--purple)}
+.scroll-cue{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;z-index:2;color:var(--muted);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
+.scroll-wheel{width:20px;height:32px;border:1px solid rgba(255,255,255,.15);border-radius:10px;display:flex;justify-content:center;padding-top:5px}
+.scroll-wheel::before{content:'';width:3px;height:6px;background:var(--cyan);border-radius:2px;animation:scrollW 1.8s infinite}
+@keyframes scrollW{0%{transform:translateY(0);opacity:1}100%{transform:translateY(10px);opacity:0}}
+
+/* ── SECTION BASE ── */
+section{padding:110px 5%}
+.w{max-width:1120px;margin:0 auto}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--cyan);margin-bottom:.8rem;display:flex;align-items:center;gap:.7rem}
+.sec-label::before{content:'//';color:var(--purple)}
+h2.sh{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,4.5vw,3.8rem);letter-spacing:-.03em;color:var(--text);margin-bottom:3rem;line-height:1.05}
+
+/* ── STATS STRIP ── */
+#strip{padding:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2)}
+.strip-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.strip-item{padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;border-right:1px solid var(--border);position:relative}
+.strip-item:last-child{border-right:none}
+.strip-num{font-family:'Syne',sans-serif;font-size:2.8rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.strip-lbl{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+
+/* ── SKILLS — BENTO GRID ── */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto;gap:1rem}
+.bento-cell{background:var(--card);border:1px solid var(--border);padding:1.8rem;transition:border-color .4s,transform .3s;position:relative;overflow:hidden}
+.bento-cell::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .4s}
+.bento-cell:hover{border-color:rgba(0,212,255,.3);transform:translateY(-3px)}
+.bento-cell:hover::before{opacity:.03}
+.b1{grid-column:span 5;grid-row:span 2}
+.b2{grid-column:span 4}
+.b3{grid-column:span 3}
+.b4{grid-column:span 4}
+.b5{grid-column:span 3}
+.b6{grid-column:span 5}
+.b7{grid-column:span 4}
+.b8{grid-column:span 5;background:linear-gradient(135deg,rgba(0,212,255,.07),rgba(168,85,247,.07));border-color:rgba(0,212,255,.2)}
+.bento-title{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);margin-bottom:1rem;font-family:'JetBrains Mono',monospace}
+.bento-cell h3{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;color:var(--text);line-height:1.15;margin-bottom:.7rem}
+.bento-cell p{font-size:.83rem;color:var(--muted);line-height:1.7}
+.btags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.btag{font-size:.72rem;padding:.28rem .75rem;border:1px solid var(--border);color:var(--muted);transition:all .3s}
+.btag:hover{border-color:var(--cyan);color:var(--cyan)}
+.b-icon{font-size:2rem;margin-bottom:.8rem;display:block}
+.big-num{font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:var(--cyan);line-height:1;display:block}
+
+/* ── PROJECTS — HORIZONTAL SCROLL STYLE ── */
+.proj-list{display:flex;flex-direction:column;gap:0}
+.proj-row{display:grid;grid-template-columns:auto 1fr auto;align-items:start;padding:2rem 0;border-bottom:1px solid var(--border);gap:2rem;transition:background .3s;cursor:none}
+.proj-row:first-child{border-top:1px solid var(--border)}
+.proj-row:hover .proj-num{color:var(--cyan)}
+.proj-row:hover .proj-title-big{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.proj-num{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted);padding-top:.4rem;width:36px;transition:color .3s}
+.proj-main{display:flex;flex-direction:column;gap:.5rem}
+.proj-title-big{font-family:'Syne',sans-serif;font-size:clamp(1.3rem,3vw,2rem);font-weight:700;color:var(--text);transition:background .3s;letter-spacing:-.02em}
+.proj-desc-row{font-size:.85rem;color:var(--muted);max-width:600px;line-height:1.65}
+.proj-stack-row{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--purple)}
+.proj-badges{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.3rem}
+.pbadge{font-size:.62rem;padding:.2rem .55rem;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.2);color:var(--purple)}
+.proj-links-col{display:flex;flex-direction:column;gap:.5rem;align-items:flex-end;padding-top:.3rem;min-width:80px}
+.plink{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s;cursor:none;display:flex;align-items:center;gap:.3rem}
+.plink:hover{color:var(--cyan)}
+
+/* ── JOURNEY — HORIZONTAL TIMELINE ── */
+.htl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;position:relative;margin-top:1rem}
+.htl::before{content:'';position:absolute;top:20px;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform 1.4s ease}
+.htl.go::before{transform:scaleX(1)}
+.htl-item{padding:3.5rem 1.5rem 1.5rem;position:relative;border-right:1px solid var(--border);opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.htl-item:last-child{border-right:none}
+.htl-item.show{opacity:1;transform:translateY(0)}
+.htl-dot{position:absolute;top:14px;left:1.5rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan);transform:scale(0);transition:transform .4s}
+.htl-item.show .htl-dot{transform:scale(1)}
+.htl-year{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--cyan);letter-spacing:.15em;margin-bottom:.5rem;display:block}
+.htl-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.25rem;line-height:1.3}
+.htl-org{font-size:.8rem;color:var(--purple);margin-bottom:.5rem}
+.htl-desc{font-size:.78rem;color:var(--muted);line-height:1.65}
+
+/* ── CONTACT — SPLIT FULL WIDTH ── */
+#contact{padding:0;overflow:hidden}
+.contact-split{display:grid;grid-template-columns:1fr 1fr;min-height:70vh}
+.contact-left{background:var(--grad);padding:80px 6%;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.contact-left::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.contact-left h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:1rem;position:relative;z-index:1}
+.contact-left p{font-size:.95rem;color:rgba(255,255,255,.8);line-height:1.8;max-width:360px;margin-bottom:2rem;position:relative;z-index:1}
+.contact-socials{display:flex;flex-direction:column;gap:.8rem;position:relative;z-index:1}
+.csoc{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:rgba(255,255,255,.85);font-size:.85rem;transition:color .3s}
+.csoc:hover{color:#fff}
+.csoc-ic{width:34px;height:34px;background:rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0}
+.avail-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .9rem;background:rgba(255,255,255,.15);color:#fff;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2rem;border-radius:20px;position:relative;z-index:1}
+.avail-pill-dot{width:6px;height:6px;background:#10b981;border-radius:50%;animation:blink 2s infinite}
+.contact-right{background:var(--surf);padding:80px 6%;display:flex;flex-direction:column;justify-content:center}
+.contact-right h3{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:2rem;letter-spacing:-.02em}
+.cform{display:flex;flex-direction:column;gap:1.4rem}
+.fg{position:relative}
+.fg label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.4rem;font-family:'JetBrains Mono',monospace}
+.fg input,.fg textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--border);padding:.75rem 1rem;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:.9rem;outline:none;transition:border-color .3s,box-shadow .3s;resize:none}
+.fg input:focus,.fg textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,.08)}
+.fg textarea{min-height:110px}
+.btn-send{padding:.9rem 2.2rem;background:var(--grad);color:#fff;border:none;font-family:'Space Grotesk',sans-serif;font-size:.83rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:opacity .3s,transform .3s;position:relative;overflow:hidden}
+.btn-send:hover{opacity:.9;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{padding:2rem 5%;border-top:1px solid var(--border);background:var(--bg2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-l{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted)}
+.foot-l span{color:var(--cyan)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{color:var(--muted);font-size:.72rem;text-decoration:none;transition:color .3s;letter-spacing:.06em;text-transform:uppercase}
+.foot-links a:hover{color:var(--text)}
+
+/* BACK TO TOP */
+#btt{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:500}
+#btt.show{opacity:1;pointer-events:auto}
+#btt:hover{transform:translateY(-3px) scale(1.1)}
+
+/* RESUME DROPDOWN */
+.res-wrap{position:relative;display:inline-block}
+.res-wrap.float-wrap{position:fixed;bottom:2rem;left:2rem;z-index:500}
+.res-btn{padding:.45rem 1.2rem;background:var(--grad);color:#fff;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-family:'Space Grotesk',sans-serif;font-weight:500;border:none;cursor:pointer;display:flex;align-items:center;gap:.5rem;white-space:nowrap;transition:opacity .3s}
+.res-btn.outline{background:var(--surf);border:1px solid var(--border);color:var(--text);font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em}
+.res-btn:hover{opacity:.85}
+.res-arrow{font-size:.6rem;transition:transform .3s}
+.res-wrap:hover .res-arrow,.res-wrap.open .res-arrow{transform:rotate(180deg)}
+.res-drop{position:absolute;top:110%;bottom:auto;left:0;background:var(--card);border:1px solid var(--border);min-width:220px;display:none;flex-direction:column;z-index:600;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.res-wrap:hover .res-drop,.res-wrap.open .res-drop{display:flex}
+.res-drop a{padding:.75rem 1.1rem;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);transition:background .25s,color .25s;display:flex;align-items:center;gap:.6rem;font-family:'Space Grotesk',sans-serif}
+.res-drop a:last-child{border-bottom:none}
+.res-drop a:hover{background:rgba(0,212,255,.06);color:var(--cyan)}
+.res-drop a .badge{font-size:.6rem;padding:.15rem .45rem;background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.25);color:var(--purple);letter-spacing:.06em}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr;padding-top:100px}
+  .hero-right{display:none}
+  .bento{grid-template-columns:1fr 1fr}
+  .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{grid-column:span 2}
+  .contact-split{grid-template-columns:1fr}
+  .strip-inner{grid-template-columns:repeat(2,1fr)}
+  .strip-item:nth-child(2){border-right:none}
+  .strip-item:nth-child(3){border-top:1px solid var(--border)}
+}
+@media(max-width:640px){
+  section{padding:70px 5%}
+  .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:1.5rem;border-bottom:1px solid var(--border);gap:1rem}
+  .nav-links.open{display:flex}
+  .burger{display:flex}
+  .bento{grid-template-columns:1fr}
+  .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{grid-column:span 1}
+  .proj-row{grid-template-columns:auto 1fr;display:grid}
+  .proj-links-col{display:none}
+  .htl{grid-template-columns:1fr 1fr}
+  .strip-inner{grid-template-columns:repeat(2,1fr)}
+}
+</style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="nav-bar">
-        <div class="nav-wrapper">
-            <a href="#home" class="logo">
-                <span class="logo-text">PS</span>
-            </a>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-item active">Home</a></li>
-                <li><a href="#about" class="nav-item">About</a></li>
-                <li><a href="#experience" class="nav-item">Experience</a></li>
-                <li><a href="#projects" class="nav-item">Projects</a></li>
-                <li><a href="#contact" class="nav-item">Contact</a></li>
-            </ul>
-            
-            <div class="nav-controls">
-                <a href="./assets/certificates/Parth Suryawanshi.pdf" class="cta-btn" download>
-                    <span>Resume</span>
-                    <i class="fas fa-download"></i>
-                </a>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+<!-- PRELOADER -->
+<div id="preload">
+  <div class="pre-text">PARTH</div>
+  <div class="pre-bar"><div class="pre-fill"></div></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="logo">PS.</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#skills" class="nl">Skills</a></li>
+    <li><a href="#projects" class="nl">Work</a></li>
+    <li><a href="#journey" class="nl">Journey</a></li>
+    <li><a href="#contact" class="nl">Contact</a></li>
+  </ul>
+  <div class="res-wrap" id="navResWrap">
+    <button class="res-btn" onclick="toggleDrop('navResWrap')">Resume <span class="res-arrow">▾</span></button>
+    <div class="res-drop">
+      <a href="./assets/certificates/Parth_FullStack_Resume.docx" download>↓ Full Stack <span class="badge">React · Spring Boot</span></a>
+      <a href="./assets/certificates/Parth_Java_Developer_Resume.docx" download>↓ Java Developer <span class="badge">Java · Spring</span></a>
+      <a href="./assets/certificates/Parth_DBA_Resume.docx" download>↓ DBA <span class="badge">MySQL · DB</span></a>
+    </div>
+  </div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="padding-bottom:0">
+  <div class="blob hero-blob1"></div>
+  <div class="blob hero-blob2"></div>
+
+  <div class="hero-left">
+    <div class="hero-chip" id="hchip"><div class="hero-chip-dot"></div>Available for Internships & Projects</div>
+    <h1 class="hero-h1" id="hh1">Parth <span class="grad-text">Suryawanshi</span></h1>
+    <div class="hero-role" id="hrole"><span id="typed-text"></span></div>
+    <p class="hero-bio" id="hbio">MCA student at <strong style="color:var(--text)">MIT World Peace University</strong>, Pune. Building scalable full-stack applications with React, Java Spring Boot, and cloud infrastructure.</p>
+    <div class="hero-actions" id="hact">
+      <a href="#projects" class="btn-primary">View My Work →</a>
+      <div class="res-wrap" id="heroResWrap" style="display:inline-block">
+        <button class="btn-ghost" style="background:transparent;font-family:inherit;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(0,212,255,.3);color:var(--cyan);padding:.85rem 2rem;cursor:pointer;display:flex;align-items:center;gap:.5rem" onclick="toggleDrop('heroResWrap')">Download Resume <span class="res-arrow">▾</span></button>
+        <div class="res-drop" style="bottom:auto;top:110%">
+          <a href="./assets/certificates/Parth_FullStack_Resume.docx" download>↓ Full Stack <span class="badge">React · Spring Boot</span></a>
+          <a href="./assets/certificates/Parth_Java_Developer_Resume.docx" download>↓ Java Developer <span class="badge">Java · Spring</span></a>
+          <a href="./assets/certificates/Parth_DBA_Resume.docx" download>↓ DBA <span class="badge">MySQL · DB</span></a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-bg">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
+  <div class="hero-right" id="hright">
+    <div class="h-card">
+      <div class="h-card-label">Currently building</div>
+      <div class="h-card-value">Skillnex <span>— AI LMS</span></div>
+      <div class="h-card-tags">
+        <span class="ctag">React 18</span><span class="ctag">Spring Boot</span><span class="ctag">Gemini API</span>
+      </div>
+    </div>
+    <div class="h-card">
+      <div class="h-card-label">Core Proficiency</div>
+      <div class="stat-bars">
+        <div class="sbar"><span style="width:70px">Full Stack</span><div class="sbar-inner"><div class="sbar-fill" style="--w:.9" data-w=".9"></div></div><span>90%</span></div>
+        <div class="sbar"><span style="width:70px">Java/Spring</span><div class="sbar-inner"><div class="sbar-fill" data-w=".85"></div></div><span>85%</span></div>
+        <div class="sbar"><span style="width:70px">Cloud/AWS</span><div class="sbar-inner"><div class="sbar-fill" data-w=".7"></div></div><span>70%</span></div>
+      </div>
+    </div>
+    <div class="h-card">
+      <div class="h-card-label">Quick Stats</div>
+      <div class="h-card-value"><span>6</span> Projects &nbsp;·&nbsp; <span>13+</span> Certs</div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><div class="scroll-wheel"></div><span>Scroll</span></div>
+</section>
+
+<!-- STATS STRIP -->
+<div id="strip">
+  <div class="strip-inner">
+    <div class="strip-item" data-aos="fade-up"><span class="strip-num" data-count="6">0+</span><span class="strip-lbl">Projects Built</span></div>
+    <div class="strip-item" data-aos="fade-up" data-aos-delay="80"><span class="strip-num" data-count="13">0+</span><span class="strip-lbl">Certifications</span></div>
+    <div class="strip-item" data-aos="fade-up" data-aos-delay="160"><span class="strip-num" data-count="3">0</span><span class="strip-lbl">Virtual Programs</span></div>
+    <div class="strip-item" data-aos="fade-up" data-aos-delay="240"><span class="strip-num" data-count="7">0.0</span><span class="strip-lbl">CGPA (BSc CS)</span></div>
+  </div>
+</div>
+
+<!-- SKILLS – BENTO -->
+<section id="skills">
+  <div class="w">
+    <div class="sec-label" data-aos="fade-up">Technical Arsenal</div>
+    <h2 class="sh" data-aos="fade-up" data-aos-delay="60">What I work<br><span class="grad-text">with.</span></h2>
+
+    <div class="bento">
+      <div class="bento-cell b1" data-aos="fade-up" data-aos-delay="0">
+        <span class="b-icon">⚛️</span>
+        <div class="bento-title">Frontend</div>
+        <h3>React &<br>Modern Web</h3>
+        <p>Building interactive, performant UIs with React 18, Tailwind CSS, and modern JavaScript (ES6+).</p>
+        <div class="btags">
+          <span class="btag">React.js</span><span class="btag">JavaScript</span><span class="btag">HTML5</span><span class="btag">CSS3</span><span class="btag">Tailwind</span><span class="btag">Bootstrap</span>
         </div>
-        
-        <div class="hero-grid">
-            <div class="hero-left" data-aos="fade-right" data-aos-duration="1000">
-                <span class="hero-tag">Welcome to my portfolio</span>
-                <h1 class="hero-heading">
-                    Hi, I'm <span class="accent-text">Parth Suryawanshi</span>
-                </h1>
-                <h2 class="hero-subheading">Full Stack Developer & Tech Enthusiast</h2>
-                
-                <p class="hero-desc">
-                    MCA student at MIT World Peace University, passionate about building scalable web applications 
-                    with React.js, Java, and AWS. Experienced through virtual programs with JPMorgan Chase, AWS, 
-                    and Deloitte.
-                </p>
-                
-                <div class="hero-stats">
-                    <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
-                        <h3 class="stat-value">7.89</h3>
-                        <p class="stat-label">CGPA</p>
-                    </div>
-                    <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
-                        <h3 class="stat-value">5+</h3>
-                        <p class="stat-label">Projects</p>
-                    </div>
-                    <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
-                        <h3 class="stat-value">13+</h3>
-                        <p class="stat-label">Certificates</p>
-                    </div>
-                </div>
-                
-                <div class="hero-cta">
-                    <a href="#projects" class="primary-btn">
-                        <span>View Work</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="secondary-btn">
-                        <span>Let's Talk</span>
-                        <i class="fas fa-comments"></i>
-                    </a>
-                </div>
-                
-                <div class="social-bar">
-                    <a href="https://www.linkedin.com/in/parthsuryawanshi" class="social-icon" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/Parths01" class="social-icon" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://parths01.github.io/Portfolio/" class="social-icon" aria-label="Website">
-                        <i class="fas fa-globe"></i>
-                    </a>
-                    <a href="mailto:parthsuryawanshi001@gmail.com" class="social-icon" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                <div class="profile-card">
-                    <div class="profile-image-wrapper">
-                        <img src="./assets/images/profile.jpg" alt="Parth Suryawanshi" class="profile-img">
-                        <div class="tech-badge badge-react"><i class="fab fa-react"></i></div>
-                        <div class="tech-badge badge-java"><i class="fab fa-java"></i></div>
-                        <div class="tech-badge badge-aws"><i class="fab fa-aws"></i></div>
-                        <div class="tech-badge badge-js"><i class="fab fa-js"></i></div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="bento-cell b2" data-aos="fade-up" data-aos-delay="80">
+        <div class="bento-title">Backend</div>
+        <h3>Java & Spring</h3>
+        <div class="btags">
+          <span class="btag">Java 17</span><span class="btag">Spring Boot</span><span class="btag">Spring Security</span><span class="btag">REST APIs</span><span class="btag">PHP</span>
         </div>
-        
-        <div class="scroll-down" data-aos="fade-up" data-aos-delay="1000">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
+      </div>
+      <div class="bento-cell b3" data-aos="fade-up" data-aos-delay="120">
+        <div class="bento-title">Research</div>
+        <span class="big-num">7.17</span>
+        <p style="font-size:.75rem;color:var(--muted);margin-top:.3rem">IJRAR Impact Factor</p>
+      </div>
+      <div class="bento-cell b4" data-aos="fade-up" data-aos-delay="100">
+        <div class="bento-title">Cloud & Data</div>
+        <h3>Infra</h3>
+        <div class="btags">
+          <span class="btag">AWS</span><span class="btag">MySQL</span><span class="btag">PostgreSQL</span><span class="btag">MongoDB</span><span class="btag">Kafka</span>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="section-wrapper">
-            <div class="section-head" data-aos="fade-up">
-                <span class="section-tag">Get to know me</span>
-                <h2 class="section-heading">About <span class="accent-text">Me</span></h2>
-                <p class="section-desc">Passionate developer with a drive for innovation</p>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-content" data-aos="fade-right" data-aos-delay="100">
-                    <div class="content-block">
-                        <h3 class="block-title">Who I Am</h3>
-                        <p class="block-text">
-                            I'm Parth Suryawanshi, an MCA student at MIT World Peace University with a passion for 
-                            full-stack development. My journey in technology began with curiosity and has evolved 
-                            into expertise across web development, cloud architecture, and enterprise solutions.
-                        </p>
-                    </div>
-                    
-                    <div class="content-block">
-                        <h3 class="block-title">What I Do</h3>
-                        <p class="block-text">
-                            I specialize in building scalable web applications using modern technologies like React.js, 
-                            Java, and AWS. Through virtual experiences with JPMorgan Chase and Deloitte, I've gained 
-                            insights into enterprise-level development and data engineering practices.
-                        </p>
-                    </div>
-
-                    <div class="achievement-list">
-                        <div class="achievement-item">
-                            <i class="fas fa-trophy"></i>
-                            <span>Avishkar Research Competition (Zonal Level)</span>
-                        </div>
-                        <div class="achievement-item">
-                            <i class="fas fa-medal"></i>
-                            <span>2nd Runner-up in SAVOIR-FAIRE Competition</span>
-                        </div>
-                        <div class="achievement-item">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Published Research Paper (Impact Factor: 7.17)</span>
-                        </div>
-                        <div class="achievement-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>Multiple Intercollegiate Project Competitions</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-sidebar" data-aos="fade-left" data-aos-delay="200">
-                    <div class="info-card">
-                        <div class="card-head">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h3>Education</h3>
-                        </div>
-                        <div class="education-list">
-                            <div class="edu-item">
-                                <span class="edu-year">2025 - 2027</span>
-                                <div class="edu-info">
-                                    <h4>Master of Computer Applications</h4>
-                                    <p>MIT World Peace University</p>
-                                    <span class="badge badge-current">Pursuing</span>
-                                </div>
-                            </div>
-                            <div class="edu-item">
-                                <span class="edu-year">2022 - 2025</span>
-                                <div class="edu-info">
-                                    <h4>BSc Computer Science</h4>
-                                    <p>Dr. D. Y. Patil Vidyapeeth</p>
-                                    <span class="badge badge-cgpa">CGPA: 7.89</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="card-head">
-                            <i class="fas fa-code"></i>
-                            <h3>Core Skills</h3>
-                        </div>
-                        <div class="skills-grid">
-                            
-                                <h4>Front-End</h4>
-                                <div class="skill-list">
-                                    <span class="skill-item">React</span>
-                                    <span class="skill-item">JavaScript</span>
-                                    <span class="skill-item">HTML</span>
-                                    <span class="skill-item">CSS</span>
-                                    <span class="skill-item">Bootstrap</span>
-                                </div>
-                            
-                                <h4>Back-End</h4>
-                                <div class="skill-list">
-                                    <span class="skill-item">Java (17)</span>
-                                    <span class="skill-item">Spring Boot</span>
-                                    <span class="skill-item">Spring Security</span>
-                                    <span class="skill-item">PHP</span>
-                                    <span class="skill-item">Python</span>
-                                    <span class="skill-item">Django</span>
-                                </div>
-                                <h4>Cloud & Data</h4>
-                                <div class="skill-list">
-                                    <span class="skill-item">AWS</span>
-                                    <span class="skill-item">MySQL</span>
-                                    <span class="skill-item">PostgreSQL</span>
-                                    <span class="skill-item">MongoDB</span>
-                                    <span class="skill-item">Apache Kafka</span>
-                                    <span class="skill-item">JPA & Hibernate</span>
-                                </div>
-                                <h4>Tools & Operating Systems</h4>
-                                <div class="skill-list">
-                                    <span class="skill-item">Git</span>
-                                    <span class="skill-item">Maven</span>
-                                    <span class="skill-item">Docker</span>
-                                    <span class="skill-item">Linux</span>
-                                    <span class="skill-item">REST APIs</span>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="bento-cell b5" data-aos="fade-up" data-aos-delay="140">
+        <div class="bento-title">Education</div>
+        <span class="big-num" style="font-size:2.5rem;color:var(--purple)">MCA</span>
+        <p style="font-size:.75rem;color:var(--muted);margin-top:.3rem">MIT WPU, Pune<br>2025 – 2027</p>
+      </div>
+      <div class="bento-cell b6" data-aos="fade-up" data-aos-delay="120">
+        <div class="bento-title">Tools & DevOps</div>
+        <h3>Developer Toolkit</h3>
+        <div class="btags">
+          <span class="btag">Git</span><span class="btag">Docker</span><span class="btag">Linux</span><span class="btag">Maven</span><span class="btag">Postman</span><span class="btag">VS Code</span>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="section-wrapper">
-            <div class="section-head" data-aos="fade-up">
-                <span class="section-tag">My journey</span>
-                <h2 class="section-heading">Professional <span class="accent-text">Experience</span></h2>
-                <p class="section-desc">Virtual experiences with industry leaders</p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                    </div>
-                    <div class="timeline-card">
-                        <div class="card-header">
-                            <div class="company-badge jpmorgan-badge">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>Software Engineering Virtual Experience</h3>
-                                <h4>JPMorgan Chase & Co.</h4>
-                                <span class="date-badge">July 2025</span>
-                            </div>
-                        </div>
-                        <p class="card-desc">
-                            Hands-on experience with enterprise-level software development, focusing on modern 
-                            backend technologies and financial system architecture.
-                        </p>
-                        <ul class="highlight-list">
-                            <li>Kafka integration for real-time data streaming</li>
-                            <li>H2 database implementation and management</li>
-                            <li>REST API development and testing</li>
-                            <li>Spring Boot controller layer design</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">Kafka</span>
-                            <span class="tech-tag">H2 Database</span>
-                            <span class="tech-tag">REST API</span>
-                        </div>
-                        <a href="./assets/certificates/JPMorgan_Software_Engineering_Certificate.pdf" class="cert-link" target="_blank">
-                            <i class="fas fa-certificate"></i> View Certificate
-                        </a>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                    </div>
-                    <div class="timeline-card">
-                        <div class="card-header">
-                            <div class="company-badge deloitte-badge">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>Data Engineer Virtual Simulation</h3>
-                                <h4>Deloitte</h4>
-                                <span class="date-badge">March 2025</span>
-                            </div>
-                        </div>
-                        <p class="card-desc">
-                            Comprehensive data engineering simulation focusing on business analytics, trend analysis, 
-                            and consulting frameworks.
-                        </p>
-                        <ul class="highlight-list">
-                            <li>Business data analysis and interpretation</li>
-                            <li>Trend identification and pattern recognition</li>
-                            <li>Implementation of analytical frameworks</li>
-                            <li>Data-driven decision making processes</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Data Analysis</span>
-                            <span class="tech-tag">Business Intelligence</span>
-                            <span class="tech-tag">Analytics</span>
-                        </div>
-                        <a href="./assets/certificates/Deloitte_Data_Analytics_Certificate.pdf" class="cert-link" target="_blank">
-                            <i class="fas fa-certificate"></i> View Certificate
-                        </a>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                    </div>
-                    <div class="timeline-card">
-                        <div class="card-header">
-                            <div class="company-badge aws-badge">
-                                <i class="fab fa-aws"></i>
-                            </div>
-                            <div class="company-info">
-                                <h3>AWS Solutions Architecture</h3>
-                                <h4>Amazon Web Services</h4>
-                                <span class="date-badge">December 2024</span>
-                            </div>
-                        </div>
-                        <p class="card-desc">
-                            Comprehensive simulation covering cloud architecture fundamentals, scalable system design, 
-                            and AWS best practices.
-                        </p>
-                        <ul class="highlight-list">
-                            <li>Scalable cloud hosting design</li>
-                            <li>AWS infrastructure optimization</li>
-                            <li>Security frameworks and compliance</li>
-                            <li>Enterprise-level cloud solutions</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Cloud Architecture</span>
-                            <span class="tech-tag">Scalable Systems</span>
-                        </div>
-                        <a href="./assets/certificates/AWS_Solutions_Architecture_Certificate.pdf" class="cert-link" target="_blank">
-                            <i class="fas fa-certificate"></i> View Certificate
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificates Showcase -->
-            <div class="certificates-showcase" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="showcase-title">
-                    <i class="fas fa-award"></i> Achievements & Certifications
-                </h3>
-                
-                <div class="cert-grid">
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="cert-img">
-                            <img src="./assets/certificates/IJRAR_Research_Certificate.jpg" alt="IJRAR Research Certificate">
-                            <div class="cert-overlay">
-                                <a href="./assets/certificates/IJRAR_Research_Certificate.jpg" class="overlay-btn" target="_blank">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                <a href="./assets/certificates/IJRAR_Research_Paper.pdf" class="overlay-btn" target="_blank">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="cert-info">
-                            <h4>Research Publication</h4>
-                            <p>IJRAR - Impact Factor 7.17</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="cert-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="cert-info">
-                            <h4>Java with DSA</h4>
-                            <p>Comprehensive Certification</p>
-                            <a href="./assets/certificates/Java_DSA_Certification.pdf" class="view-cert" target="_blank">
-                                View Certificate <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="cert-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="cert-info">
-                            <h4>TechXplore-2025</h4>
-                            <p>Project Competition</p>
-                            <a href="./assets/certificates/TechXplore_2025_Certificate.jpg" class="view-cert" target="_blank">
-                                View Certificate <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="cert-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <div class="cert-info">
-                            <h4>SAVOIR-FAIRE</h4>
-                            <p>2nd Runner-up</p>
-                            <a href="./assets/certificates/Savoir_Faire_Byte_Battle_2024_Certificate.jpg" class="view-cert" target="_blank">
-                                View Certificate <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="cert-img">
-                            <img src="./assets/certificates/Networking .png" alt="Cisco Networking Basics">
-                        </div>
-                        <div class="cert-info">
-                            <h4>Networking Basics</h4>
-                            <p>Cisco Networking Academy</p>
-                            <a href="./assets/certificates/Networking .png" class="view-cert" target="_blank">
-                                View Certificate <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="bento-cell b7" data-aos="fade-up" data-aos-delay="160">
+        <div class="bento-title">Computer Science</div>
+        <h3>CS Fundamentals</h3>
+        <div class="btags">
+          <span class="btag">Data Structures</span><span class="btag">Algorithms</span><span class="btag">C++</span><span class="btag">Python</span><span class="btag">Django</span>
         </div>
-    </section>
+      </div>
+      <div class="bento-cell b8" data-aos="fade-up" data-aos-delay="180">
+        <div class="bento-title">Virtual Experience</div>
+        <h3>Industry Exposure</h3>
+        <p>JPMorgan Chase · Deloitte · Amazon Web Services — hands-on enterprise-level simulations.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="section-wrapper">
-            <div class="section-head" data-aos="fade-up">
-                <span class="section-tag">My work</span>
-                <h2 class="section-heading">Featured <span class="accent-text">Projects</span></h2>
-                <p class="section-desc">Innovative solutions demonstrating technical expertise</p>
-            </div>
+<!-- PROJECTS – LIST -->
+<section id="projects" style="background:var(--bg2)">
+  <div class="w">
+    <div class="sec-label" data-aos="fade-up">Selected Work</div>
+    <h2 class="sh" data-aos="fade-up" data-aos-delay="60">Things I've<br><span class="grad-text">built.</span></h2>
+    <div class="proj-list">
 
-            <div class="projects-grid">
-                <!-- Featured Project -->
-                <div class="project-card featured-project" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-img">
-                        <img src="./assets/images/Veer-sahayata.png" alt="Veer Sahayata">
-                        <div class="project-overlay">
-                            <div class="overlay-links">
-                                <a href="https://github.com/Parths01/veer-sahayata" class="overlay-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://github.com/Parths01/veer-sahayata" class="overlay-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag">Full Stack</span>
-                        <h3 class="project-title">Veer Sahayata - Defence Welfare Portal</h3>
-                        <p class="project-desc">
-                            Comprehensive web portal for Indian Defence personnel providing seamless access to 
-                            pension tracking, news updates, document verification, and educational support.
-                        </p>
-                        <ul class="feature-list">
-                            <li>Interactive dashboard with data visualization</li>
-                            <li>Secure authentication and role-based access</li>
-                            <li>Document management system</li>
-                            <li>Fully responsive design</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tech-tag">React.js</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Chart.js</span>
-                        </div>
-                        <span class="status-tag completed">
-                            <i class="fas fa-check-circle"></i> Completed v2.0.0
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Regular Projects -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-img">
-                        <img src="./assets/images/MediSync.png" alt="MediSync">
-                        <div class="project-overlay">
-                            <div class="overlay-links">
-                                <a href="https://github.com/Parths01/MediSync" class="overlay-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://github.com/Parths01/MediSync" class="overlay-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag">Analytics</span>
-                        <h3 class="project-title">MediSync - Healthcare Dashboard</h3>
-                        <p class="project-desc">
-                            Intelligent healthcare analytics dashboard tracking patient metrics and generating 
-                            actionable insights with real-time analytics.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                        <span class="status-tag completed">
-                            <i class="fas fa-check-circle"></i> Completed
-                        </span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-img">
-                        <img src="./assets/images/Oneshot.png" alt="OneShot">
-                        <div class="project-overlay">
-                            <div class="overlay-links">
-                                <a href="https://github.com/Parths01/disposable-camera" class="overlay-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://github.com/Parths01/disposable-camera" class="overlay-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag">Web App</span>
-                        <h3 class="project-title">OneShot - Disposable Online Camera</h3>
-                        <p class="project-desc">
-                            Innovative time-limited media sharing platform with 24-hour access and role-based 
-                            uploads, creating unique ephemeral sharing experience.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <span class="status-tag completed">
-                            <i class="fas fa-check-circle"></i> Completed
-                        </span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-img">
-                        <img src="./assets/images/Automated Waste Garbage Separation.jpg" alt="IoT Waste Management">
-                        <div class="project-overlay">
-                            <div class="overlay-links">
-                                <a href="./assets/certificates/IJRAR_Research_Certificate.jpg" class="overlay-link" target="_blank">
-                                    <i class="fas fa-award"></i>
-                                </a>
-                                <a href="./assets/certificates/IJRAR_Research_Paper.pdf" class="overlay-link" target="_blank">
-                                    <i class="fas fa-file-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag">IoT Research</span>
-                        <h3 class="project-title">Automated Waste Separation System</h3>
-                        <p class="project-desc">
-                            Intelligent waste management system using Arduino and sensors for automated garbage 
-                            separation. Published in IJRAR with Impact Factor 7.17.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">IoT Sensors</span>
-                            <span class="tech-tag">C++</span>
-                        </div>
-                        <span class="status-tag published">
-                            <i class="fas fa-journal-whills"></i> Published Research
-                        </span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-img">
-                        <img src="./assets/images/ERP.png" alt="ERP System">
-                        <div class="project-overlay">
-                            <div class="overlay-links">
-                                <a href="https://github.com/CyberSherlock25/ERP--College-Management-System" class="overlay-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag">Enterprise</span>
-                        <h3 class="project-title">ERP System (College)</h3>
-                        <p class="project-desc">
-                            Comprehensive college ERP with student & staff management, attendance, timetables, 
-                            fee management, and reporting with role-based access control.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">SQLite</span>
-                        </div>
-                        <span class="status-tag progress">
-                            <i class="fas fa-spinner fa-pulse"></i> In Progress
-                        </span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-img">
-                        <img src="./assets/images/LegalCMS.png" alt="Smart Legal Case Management System">
-                        <div class="project-overlay">
-                            <div class="overlay-links">
-                                <a href="https://github.com" class="overlay-link" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag">Enterprise</span>
-                        <h3 class="project-title">Smart Legal Case Management System</h3>
-                        <p class="project-desc">
-                            Enterprise web application for digital legal operations - manages cases, deadlines, 
-                            hearings, and users with role-based access control and comprehensive reporting.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Java 17</span>
-                            <span class="tech-tag">Spring Boot 3.2</span>
-                            <span class="tech-tag">Spring Security</span>
-                            <span class="tech-tag">JPA/Hibernate</span>
-                            <span class="tech-tag">MySQL 8</span>
-                            <span class="tech-tag">JWT</span>
-                        </div>
-                        <span class="status-tag progress">
-                            <i class="fas fa-spinner fa-pulse"></i> In Progress v1.0.0
-                        </span>
-                    </div>
-                </div>
-            </div>
+      <div class="proj-row" data-aos="fade-up" data-aos-delay="0">
+        <div class="proj-num">01</div>
+        <div class="proj-main">
+          <div class="proj-title-big">Skillnex — AI-Powered LMS</div>
+          <div class="proj-desc-row">Full-stack Learning Management System with AI proctoring, Google Gemini integration, JWT auth, and role-based dashboards with production Docker deployment.</div>
+          <div class="proj-stack-row">React 18 · Spring Boot · MySQL · Google Gemini API · Tailwind CSS</div>
+          <div class="proj-badges"><span class="pbadge">Full Stack</span><span class="pbadge">AI/LMS</span><span class="pbadge">Production</span></div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="section-wrapper">
-            <div class="section-head" data-aos="fade-up">
-                <span class="section-tag">Get in touch</span>
-                <h2 class="section-heading">Let's Work <span class="accent-text">Together</span></h2>
-                <p class="section-desc">Ready to bring your ideas to life? Let's connect!</p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
-                    <h3 class="info-title">Let's Start a Conversation</h3>
-                    <p class="info-text">
-                        I'm always excited to discuss new opportunities, collaborate on innovative projects, 
-                        or simply have a conversation about technology and development.
-                    </p>
-
-                    <div class="contact-methods">
-                        <div class="method-item">
-                            <div class="method-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>Email</h4>
-                                <p>parthsuryawanshi001@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div class="method-item">
-                            <div class="method-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>LinkedIn</h4>
-                                <a href="https://www.linkedin.com/in/parthsuryawanshi" target="_blank">Connect with me</a>
-                            </div>
-                        </div>
-
-                        <div class="method-item">
-                            <div class="method-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>Location</h4>
-                                <p>Pune, Maharashtra, India</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="availability-status">
-                        <div class="status-dot"></div>
-                        <span>Currently available for internships and projects</span>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="200">
-                    <div class="form-field">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
+        <div class="proj-links-col">
+          <a href="https://github.com/Parths01/Skillnex" target="_blank" class="plink">↗ GitHub</a>
+          <a href="https://parths01.github.io/Portfolio/" target="_blank" class="plink">↗ Live</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Parth Suryawanshi. Crafted with <i class="fas fa-heart"></i> using modern web technologies.</p>
+      <div class="proj-row" data-aos="fade-up" data-aos-delay="60">
+        <div class="proj-num">02</div>
+        <div class="proj-main">
+          <div class="proj-title-big">Smart Legal Case Management System</div>
+          <div class="proj-desc-row">Enterprise web app for digital legal operations — case management, deadline tracking, hearings, users, with JWT auth, Spring Security, and comprehensive reporting.</div>
+          <div class="proj-stack-row">Java 17 · Spring Boot 3.2 · Spring Security · JPA/Hibernate · MySQL 8 · JWT</div>
+          <div class="proj-badges"><span class="pbadge">Enterprise</span><span class="pbadge">Java</span><span class="pbadge">Spring Boot</span></div>
         </div>
-    </footer>
+        <div class="proj-links-col"><a href="https://github.com/Parths01" target="_blank" class="plink">↗ GitHub</a></div>
+      </div>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/script.js"></script>
+      <div class="proj-row" data-aos="fade-up" data-aos-delay="120">
+        <div class="proj-num">03</div>
+        <div class="proj-main">
+          <div class="proj-title-big">Veer Sahayata — Defence Welfare Portal</div>
+          <div class="proj-desc-row">Comprehensive web portal for Indian Defence personnel — pension tracking, news, document verification, and educational support with interactive data visualization.</div>
+          <div class="proj-stack-row">React.js · PHP · MySQL · Chart.js</div>
+          <div class="proj-badges"><span class="pbadge">Full Stack</span><span class="pbadge">Dashboard</span></div>
+        </div>
+        <div class="proj-links-col"><a href="https://github.com/Parths01/veer-sahayata" target="_blank" class="plink">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj-row" data-aos="fade-up" data-aos-delay="180">
+        <div class="proj-num">04</div>
+        <div class="proj-main">
+          <div class="proj-title-big">MediSync — Healthcare Dashboard</div>
+          <div class="proj-desc-row">Intelligent healthcare analytics dashboard tracking patient metrics and generating actionable insights with real-time analytics and data visualization.</div>
+          <div class="proj-stack-row">PHP · JavaScript · MySQL</div>
+          <div class="proj-badges"><span class="pbadge">Analytics</span><span class="pbadge">Healthcare</span></div>
+        </div>
+        <div class="proj-links-col"><a href="https://github.com/Parths01/MediSync" target="_blank" class="plink">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj-row" data-aos="fade-up" data-aos-delay="240">
+        <div class="proj-num">05</div>
+        <div class="proj-main">
+          <div class="proj-title-big">OneShot — Disposable Online Camera</div>
+          <div class="proj-desc-row">Time-limited media sharing platform with 24-hour access, role-based uploads, and admin controls creating a unique ephemeral sharing experience.</div>
+          <div class="proj-stack-row">PHP · MySQL · JavaScript</div>
+          <div class="proj-badges"><span class="pbadge">Web App</span><span class="pbadge">PHP</span></div>
+        </div>
+        <div class="proj-links-col"><a href="https://github.com/Parths01/disposable-camera" target="_blank" class="plink">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj-row" data-aos="fade-up" data-aos-delay="300">
+        <div class="proj-num">06</div>
+        <div class="proj-main">
+          <div class="proj-title-big">Automated Waste Separation System</div>
+          <div class="proj-desc-row">Smart waste management using Arduino and IoT sensors for automated garbage separation. Published in IJRAR journal with Impact Factor 7.17.</div>
+          <div class="proj-stack-row">Arduino · IoT Sensors · C++</div>
+          <div class="proj-badges"><span class="pbadge">IoT</span><span class="pbadge">Research</span><span class="pbadge">Published</span></div>
+        </div>
+        <div class="proj-links-col"><a href="./assets/certificates/IJRAR_Research_Paper.pdf" target="_blank" class="plink">↗ Paper</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY – HORIZONTAL TIMELINE -->
+<section id="journey">
+  <div class="w">
+    <div class="sec-label" data-aos="fade-up">My Path</div>
+    <h2 class="sh" data-aos="fade-up" data-aos-delay="60">The <span class="grad-text">Journey.</span></h2>
+    <div class="htl" id="htl">
+      <div class="htl-item">
+        <div class="htl-dot"></div>
+        <span class="htl-year">2025 – 2027</span>
+        <div class="htl-title">Master of Computer Applications</div>
+        <div class="htl-org">MIT World Peace University, Pune</div>
+        <p class="htl-desc">Specializing in Full Stack Development, Cloud Computing & AI/ML.</p>
+      </div>
+      <div class="htl-item">
+        <div class="htl-dot" style="border-color:var(--purple)"></div>
+        <span class="htl-year" style="color:var(--purple)">Jul 2025</span>
+        <div class="htl-title">Software Engineering Virtual Exp.</div>
+        <div class="htl-org">JPMorgan Chase & Co.</div>
+        <p class="htl-desc">Kafka, Spring Boot REST APIs, H2 DB, controller layer design.</p>
+      </div>
+      <div class="htl-item">
+        <div class="htl-dot" style="border-color:var(--pink)"></div>
+        <span class="htl-year" style="color:var(--pink)">Mar 2025</span>
+        <div class="htl-title">Data Engineer Simulation</div>
+        <div class="htl-org">Deloitte</div>
+        <p class="htl-desc">Business data analysis, trend identification & analytical frameworks.</p>
+      </div>
+      <div class="htl-item">
+        <div class="htl-dot" style="border-color:var(--green)"></div>
+        <span class="htl-year" style="color:var(--green)">Dec 2024</span>
+        <div class="htl-title">AWS Solutions Architecture</div>
+        <div class="htl-org">Amazon Web Services</div>
+        <p class="htl-desc">Scalable cloud hosting, infrastructure optimization & security.</p>
+      </div>
+      <div class="htl-item">
+        <div class="htl-dot"></div>
+        <span class="htl-year">2022 – 2025</span>
+        <div class="htl-title">B.Sc. Computer Science</div>
+        <div class="htl-org">Dr. D. Y. Patil ACS College · CGPA 7.89</div>
+        <p class="htl-desc">Avishkar winner, published research in IJRAR (IF 7.17).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT – SPLIT -->
+<section id="contact" style="padding:0">
+  <div class="contact-split">
+    <div class="contact-left" data-aos="fade-right">
+      <div class="avail-pill"><div class="avail-pill-dot"></div>Open to Opportunities</div>
+      <h2>Let's build<br>something.</h2>
+      <p>Available for SDE internships, full-time roles, and interesting project collaborations. Based in Pune — open to remote roles worldwide.</p>
+      <div class="contact-socials">
+        <a href="https://github.com/Parths01" target="_blank" class="csoc"><div class="csoc-ic">GH</div>github.com/Parths01</a>
+        <a href="https://www.linkedin.com/in/parthsuryawanshi" target="_blank" class="csoc"><div class="csoc-ic">in</div>linkedin.com/in/parthsuryawanshi</a>
+        <a href="mailto:parthsuryawanshi001@gmail.com" class="csoc"><div class="csoc-ic">@</div>parthsuryawanshi001@gmail.com</a>
+        <a href="tel:+918459471544" class="csoc"><div class="csoc-ic">☎</div>+91 8459471544</a>
+      </div>
+    </div>
+    <div class="contact-right" data-aos="fade-left">
+      <h3>Send a Message</h3>
+      <form class="cform" id="cForm" onsubmit="handleForm(event)">
+        <div class="fg"><label for="fn">Name</label><input type="text" id="fn" required></div>
+        <div class="fg"><label for="fe">Email</label><input type="email" id="fe" required></div>
+        <div class="fg"><label for="fm">Message</label><textarea id="fm" required></textarea></div>
+        <button type="submit" class="btn-send" id="sendBtn">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-l">© 2025 <span>Parth Suryawanshi</span> · Pune, India</div>
+  <div class="foot-links">
+    <a href="https://github.com/Parths01" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/parthsuryawanshi" target="_blank">LinkedIn</a>
+    <a href="mailto:parthsuryawanshi001@gmail.com">Email</a>
+    <a href="https://parths01.github.io/Portfolio/" target="_blank">Live Site</a>
+  </div>
+</footer>
+
+<a href="#hero" id="btt" aria-label="Back to top">↑</a>
+<div class="res-wrap float-wrap" id="floatResWrap">
+  <button class="res-btn outline" onclick="toggleDrop('floatResWrap')">Resume <span class="res-arrow">▾</span></button>
+  <div class="res-drop" style="top:auto;bottom:110%">
+    <a href="./assets/certificates/Parth_FullStack_Resume.docx" download>↓ Full Stack <span class="badge">React · Spring Boot</span></a>
+    <a href="./assets/certificates/Parth_Java_Developer_Resume.docx" download>↓ Java Developer <span class="badge">Java · Spring</span></a>
+    <a href="./assets/certificates/Parth_DBA_Resume.docx" download>↓ DBA <span class="badge">MySQL · DB</span></a>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
+<script>
+// ── PRELOADER ──
+window.addEventListener('load',()=>{
+  const p=document.getElementById('preload');
+  setTimeout(()=>{
+    p.classList.add('done');
+    setTimeout(()=>{p.remove();startHero();},600);
+  },1600);
+});
+
+
+// ── HERO ANIMATION ──
+function startHero(){
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to('#hchip',{opacity:1,y:0,duration:.7,ease:'power3.out'});
+  gsap.to('#hh1',{opacity:1,y:0,duration:1,delay:.2,ease:'power3.out'});
+  gsap.to('#hrole',{opacity:1,duration:.6,delay:.5});
+  gsap.to('#hbio',{opacity:1,y:0,duration:.8,delay:.6,ease:'power3.out'});
+  gsap.to('#hact',{opacity:1,y:0,duration:.7,delay:.8,ease:'power3.out'});
+  gsap.to('#hright',{opacity:1,x:0,duration:1,delay:.4,ease:'power3.out'});
+  new Typed('#typed-text',{strings:['Full Stack Developer','Java Spring Engineer','React Developer','Problem Solver','Open Source Enthusiast'],typeSpeed:55,backSpeed:30,backDelay:1800,loop:true,smartBackspace:true});
+  // Skill bars
+  setTimeout(()=>{
+    document.querySelectorAll('.sbar-fill').forEach(b=>b.classList.add('go'));
+  },1200);
+}
+
+// ── RESUME DROPDOWN ──
+function toggleDrop(id){const w=document.getElementById(id);w.classList.toggle('open');}
+document.addEventListener('click',e=>{document.querySelectorAll('.res-wrap').forEach(w=>{if(!w.contains(e.target))w.classList.remove('open');});});
+
+// ── NAVBAR ──
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scrollY>40);
+  document.getElementById('btt').classList.toggle('show',scrollY>400);
+});
+document.getElementById('burger').onclick=()=>document.getElementById('navLinks').classList.toggle('open');
+// Active link
+const sects=document.querySelectorAll('section[id],div[id="strip"]');
+const nls=document.querySelectorAll('.nl');
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)nls.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id))});
+},{threshold:.35});
+sects.forEach(s=>io.observe(s));
+
+// ── AOS ──
+AOS.init({duration:750,once:true,offset:80});
+
+// ── GSAP SCROLL ──
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll('.sh').forEach(el=>{
+  gsap.from(el,{scrollTrigger:{trigger:el,start:'top 88%'},y:50,opacity:0,duration:.9,ease:'power3.out'});
+});
+
+// ── COUNTUP ──
+const cuObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,end=parseInt(el.dataset.count);
+    const cu=new countUp.CountUp(el,end,{duration:2,suffix:'+'});
+    cu.start();cuObs.unobserve(el);
+  });
+},{threshold:.5});
+document.querySelectorAll('.strip-num').forEach(el=>cuObs.observe(el));
+
+// ── TIMELINE ──
+const htl=document.getElementById('htl');
+const tlObs=new IntersectionObserver(entries=>{
+  if(!entries[0].isIntersecting)return;
+  htl.classList.add('go');
+  document.querySelectorAll('.htl-item').forEach((t,i)=>setTimeout(()=>t.classList.add('show'),i*200));
+},{threshold:.1});
+htl&&tlObs.observe(htl);
+
+// ── FORM ──
+function handleForm(e){
+  e.preventDefault();
+  const btn=document.getElementById('sendBtn');
+  btn.textContent='Sent! ✓';btn.style.opacity='.7';
+  setTimeout(()=>{btn.textContent='Send Message →';btn.style.opacity='';e.target.reset();},3000);
+}
+</script>
 </body>
 </html>

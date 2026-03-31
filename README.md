@@ -1,184 +1,270 @@
-# Parth Suryawanshi's Modern Portfolio Website
+# 🌐 Parth Suryawanshi — Personal Portfolio Website
 
-A modern, responsive portfolio website showcasing software engineering projects, skills, and achievements. Built with HTML, CSS, and JavaScript featuring dark/light theme toggle, smooth animations, and mobile-first design.
+A modern, fully responsive personal portfolio website built with **HTML5**, **CSS3**, and **JavaScript**. Features dark/light theme toggle, smooth AOS animations, glassmorphism design, and a professional showcase of projects, experience, and certifications.
 
-## 👨‍💻 About
+🔗 **Live Site:** [parths01.github.io/Portfolio](https://parths01.github.io/Portfolio/)
 
-**Parth Suryawanshi** - Software Engineer  
-📧 parthsuryawanshi001@gmail.com  
-📞 +91 8459471544  
-📍 Pune, Maharashtra, India  
+---
 
-Final-year Computer Science student at Dr. D. Y. Patil ACS College with a passion for software and web development. Currently pursuing MCA at MIT World Peace University.
+## 👨‍💻 About Me
+
+| Field | Details |
+|---|---|
+| **Name** | Parth Suryawanshi |
+| **Role** | Full Stack Developer & Tech Enthusiast |
+| **Email** | parthsuryawanshi001@gmail.com |
+| **Phone** | +91 8459471544 |
+| **Location** | Pune, Maharashtra, India |
+| **LinkedIn** | [linkedin.com/in/parthsuryawanshi](https://www.linkedin.com/in/parthsuryawanshi) |
+| **GitHub** | [github.com/Parths01](https://github.com/Parths01) |
+| **Availability** | Open for Internships & Projects |
+
+I'm an MCA student at **MIT World Peace University**, passionate about building scalable web applications with React.js, Java, and AWS. I have hands-on virtual experience with **JPMorgan Chase**, **AWS**, and **Deloitte**, and a strong foundation in both frontend and backend development.
+
+---
+
+## 🎓 Education
+
+| Degree | Institution | Year | Result |
+|---|---|---|---|
+| **MCA** (Master of Computer Applications) | MIT World Peace University, Pune | 2025 – 2027 | Pursuing |
+| **B.Sc. Computer Science** | Dr. D. Y. Patil ACS College | 2022 – 2025 | CGPA: 7.89 |
+
+---
 
 ## 🏆 Achievements
 
-- 🥇 **1st Rank** - Avishkar Competition (Pune College Level)
-- 📄 **Published Research Paper** - "Automated Waste Garbage Separation using Arduino and Sensors" in IJRAR (Impact Factor: 7.17)
-- 🎓 **CGPA: 7.89** - B.Sc. Computer Science
+- 🥇 **1st Rank** — Avishkar Research Competition (Pune College Level / Zonal Level)
+- 🥉 **2nd Runner-up** — SAVOIR-FAIRE Competition (Byte Battle 2024)
+- 📄 **Published Research Paper** — *"Automated Waste Garbage Separation using Arduino and Sensors"* in **IJRAR** (Impact Factor: **7.17**)
+- 🏅 **Multiple Intercollegiate Project Competition** participations
+- 📊 **CGPA: 7.89** — B.Sc. Computer Science
 
-## 🚀 Quick Start
+---
 
-1. **Clone or Download** this repository
-2. **Add Your Content**:
-   - Replace `assets/images/profile-placeholder.txt` with your profile photo (`profile.jpg`)
-   - Replace `assets/images/project-placeholder.txt` with your project screenshot (`veer-sahayata.jpg`)
-   - Replace `assets/resume-placeholder.txt` with your resume PDF (`resume.pdf`)
-3. **Update Information**:
-   - Edit personal details in `index.html`
-   - Add your social media links
-   - Update project details and GitHub links
-4. **Open** `index.html` in your web browser
+## 💼 Virtual Experience / Internships
+
+### 🏦 JPMorgan Chase & Co. — Software Engineering Virtual Experience
+**July 2025**
+- Kafka integration for real-time data streaming
+- H2 database implementation and management
+- REST API development and testing
+- Spring Boot controller layer design
+- **Tech:** Spring Boot · Kafka · H2 Database · REST API
+
+### 📊 Deloitte — Data Engineer Virtual Simulation
+**March 2025**
+- Business data analysis and interpretation
+- Trend identification and pattern recognition
+- Implementation of analytical frameworks
+- Data-driven decision making processes
+- **Tech:** Data Analysis · Business Intelligence · Analytics
+
+### ☁️ Amazon Web Services — AWS Solutions Architecture
+**December 2024**
+- Scalable cloud hosting design
+- AWS infrastructure optimization
+- Security frameworks and compliance
+- Enterprise-level cloud solutions
+- **Tech:** AWS · Cloud Architecture · Scalable Systems
+
+---
+
+## 🚀 Featured Projects
+
+### 1. 🛡️ Veer Sahayata — Defence Welfare Portal *(Full Stack · Completed v2.0.0)*
+> Comprehensive web portal for Indian Defence personnel providing seamless access to pension tracking, news updates, document verification, and educational support.
+
+- Interactive dashboard with data visualization
+- Secure authentication and role-based access
+- Document management system
+- Fully responsive design
+- **Tech Stack:** React.js · PHP · MySQL · Chart.js
+- 🔗 [GitHub](https://github.com/Parths01/veer-sahayata)
+
+---
+
+### 2. 🏥 MediSync — Healthcare Dashboard *(Analytics · Completed)*
+> Intelligent healthcare analytics dashboard for tracking patient metrics and generating actionable insights with real-time analytics.
+
+- **Tech Stack:** PHP · JavaScript · MySQL
+- 🔗 [GitHub](https://github.com/Parths01/MediSync)
+
+---
+
+### 3. 📷 OneShot — Disposable Online Camera *(Web App · Completed)*
+> Innovative time-limited media sharing platform with 24-hour access and role-based uploads, creating a unique ephemeral sharing experience.
+
+- **Tech Stack:** PHP · MySQL · JavaScript
+- 🔗 [GitHub](https://github.com/Parths01/disposable-camera)
+
+---
+
+### 4. ♻️ Automated Waste Separation System *(IoT Research · Published)*
+> Intelligent waste management system using Arduino and sensors for automated garbage separation. Research published in IJRAR.
+
+- **Tech Stack:** Arduino · IoT Sensors · C++
+- 📄 Published in **IJRAR** — Impact Factor: 7.17
+
+---
+
+### 5. 🎓 ERP System — College Management *(Enterprise · In Progress)*
+> Comprehensive college ERP with student & staff management, attendance, timetables, fee management, and reporting with role-based access control.
+
+- **Tech Stack:** Python · Django · SQLite
+- 🔗 [GitHub](https://github.com/CyberSherlock25/ERP--College-Management-System)
+
+---
+
+### 6. ⚖️ Smart Legal Case Management System *(Enterprise · In Progress v1.0.0)*
+> Enterprise web application for digital legal operations — manages cases, deadlines, hearings, and users with role-based access control and comprehensive reporting.
+
+- **Tech Stack:** Java 17 · Spring Boot 3.2 · Spring Security · JPA/Hibernate · MySQL 8 · JWT
+
+---
+
+## 🛠️ Technical Skills
+
+### Frontend
+`React.js` · `JavaScript (ES6+)` · `HTML5` · `CSS3` · `Bootstrap`
+
+### Backend
+`Java 17` · `Spring Boot` · `Spring Security` · `PHP` · `Python` · `Django`
+
+### Cloud & Data
+`AWS` · `MySQL` · `PostgreSQL` · `MongoDB` · `Apache Kafka` · `JPA & Hibernate`
+
+### Tools & DevOps
+`Git` · `Maven` · `Docker` · `Linux` · `REST APIs` · `Arduino`
+
+---
+
+## 📜 Certifications & Courses
+
+| Certificate | Issuer |
+|---|---|
+| Software Engineering Virtual Experience | JPMorgan Chase & Co. |
+| Data Engineer Virtual Simulation | Deloitte |
+| AWS Solutions Architecture | Amazon Web Services |
+| Java with DSA | Comprehensive Certification |
+| Networking Basics | Cisco Networking Academy |
+| TechXplore-2025 | Project Competition |
+| SAVOIR-FAIRE Byte Battle 2024 | 2nd Runner-up Certificate |
+| IJRAR Research Publication | International Journal |
+| Introduction to Programming using Java & DSA | — |
+| Development using HTML5 and JavaScript | — |
+| Learning Microsoft 365 Copilot | Microsoft |
+| Microsoft Copilot: The Art of Prompt Writing | Microsoft |
+| Deloitte Australia – Data Analytics Job Simulation | Forage |
+
+> 📊 **13+ Certificates** total
+
+---
+
+## ✨ Portfolio Features
+
+| Feature | Description |
+|---|---|
+| 🎨 Modern Design | Glassmorphism, gradient orbs, clean professional layout |
+| 🌓 Dark/Light Theme | Toggle with smooth transition, saved in localStorage |
+| 📱 Fully Responsive | Optimized for mobile, tablet & desktop |
+| 🖱️ Custom Cursor | Subtle custom cursor effect |
+| 🔠 Typing Animation | Hero section rotates multiple text phrases |
+| 🎞️ AOS Animations | Scroll-triggered smooth reveal animations |
+| 📬 Contact Form | Client-side validation with success/error notifications |
+| ♿ Accessibility | Semantic HTML, keyboard nav, screen reader friendly |
+| ⚡ SEO Optimized | Meta tags & semantic HTML structure |
+| 🚀 Fast Loading | Optimized assets and efficient code |
+
+---
 
 ## 📁 Project Structure
 
 ```
 Portfolio/
-├── index.html                 # Main HTML file
+├── index.html                        # Main HTML file
 ├── assets/
 │   ├── css/
-│   │   └── style.css         # Main stylesheet with themes
+│   │   └── style.css                 # Main stylesheet with themes
 │   ├── js/
-│   │   └── script.js         # JavaScript functionality
+│   │   └── script.js                 # JavaScript functionality
 │   ├── images/
-│   │   ├── profile.jpg       # Your profile photo
-│   │   ├── Veer-sahayata.png # Project screenshots
-│   │   ├── MediSync.png      # Project screenshots
-│   │   ├── Oneshot.png       # Project screenshots
+│   │   ├── profile.jpg               # Profile photo
+│   │   ├── Veer-sahayata.png
+│   │   ├── MediSync.png
+│   │   ├── Oneshot.png
+│   │   ├── ERP.png
+│   │   ├── LegalCMS.png
 │   │   └── Automated Waste Garbage Separation.jpg
 │   └── certificates/
-│       ├── IJRAR_Certificate Parth.jpg    # Research certificate
-│       ├── IJRAR25B1802.pdf              # Research paper PDF
-│       └── Parth Suryawanshi.pdf         # Professional resume
-└── README.md                 # This file
+│       ├── IJRAR_Research_Certificate.jpg
+│       ├── IJRAR_Research_Paper.pdf
+│       ├── JPMorgan_Software_Engineering_Certificate.pdf
+│       ├── Deloitte_Data_Analytics_Certificate.pdf
+│       ├── AWS_Solutions_Architecture_Certificate.pdf
+│       ├── Java_DSA_Certification.pdf
+│       ├── TechXplore_2025_Certificate.jpg
+│       ├── Savoir_Faire_Byte_Battle_2024_Certificate.jpg
+│       ├── Networking .png
+│       └── Parth Suryawanshi.pdf     # Resume
+└── README.md
 ```
 
-## � Features
-
-- **Modern Design**: Clean, professional layout with glassmorphism effects
-- **Dark/Light Theme**: Toggle between themes with smooth transitions
-- **Responsive**: Optimized for all device sizes
-- **Interactive**: Custom cursor, loading animations, and scroll effects
-- **Experience Timeline**: Professional experience showcase
-- **Certificates Section**: Integrated achievements and certifications
-- **Contact Form**: Functional contact form with validation
-- **Performance Optimized**: Fast loading with efficient code structure
-
-### Colors & Theme
-- Edit CSS variables in `:root` and `[data-theme="dark"]` sections
-- Primary color: `--primary-color`
-- Secondary color: `--secondary-color`
-- Background colors: `--bg-primary`, `--bg-secondary`, `--bg-tertiary`
-
-### Content Updates
-1. **Personal Information**: Update name, title, bio in `index.html`
-2. **Skills**: Modify skill categories and tags in the skills section
-3. **Projects**: Add new project cards or update existing ones
-4. **Social Links**: Update href attributes for LinkedIn, GitHub, etc.
-
-### Adding New Sections
-1. Add new section HTML in `index.html`
-2. Add corresponding styles in `style.css`
-3. Update navigation menu with new link
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+---
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic markup
-- **CSS3**: Grid, Flexbox, Custom Properties, Animations
-- **JavaScript**: ES6+, Intersection Observer, Local Storage
-- **External Libraries**:
-  - Google Fonts (Poppins)
-  - Font Awesome Icons
-  - AOS (Animate On Scroll)
+- **HTML5** — Semantic markup
+- **CSS3** — Grid, Flexbox, Custom Properties, Animations
+- **JavaScript** — ES6+, Intersection Observer, Local Storage
+- **Google Fonts** — Poppins, Playfair Display
+- **Font Awesome 6** — Icons
+- **AOS** — Animate On Scroll library
 
-## ✨ Special Features
+---
 
-### Theme Toggle
-- Automatically saves user preference
-- Smooth transition between themes
-- Icon changes based on current theme
+## 🚀 Quick Start
 
-### Typing Animation
-- Multiple rotating text phrases
-- Realistic typing speed with pauses
-- Customizable text array
+```bash
+# 1. Clone the repository
+git clone https://github.com/Parths01/Portfolio.git
 
-### Contact Form
-- Client-side validation
-- Success/error notifications
-- Email format validation
+# 2. Navigate to the folder
+cd Portfolio
 
-### Accessibility
-- Semantic HTML structure
-- Keyboard navigation support
-- Screen reader friendly
-- High contrast ratios
+# 3. Open in browser
+open index.html
+```
 
-## 💼 Featured Projects
+> No build step or server required — it's a pure static site.
 
-### 1. **OneShot - Disposable Online Camera**
-- **Tech Stack**: PHP, MySQL, JavaScript, HTML/CSS
-- **Description**: Time-limited media sharing platform with 24-hour access, role-based uploads, and admin controls
-- **Features**: Ephemeral sharing, user management, secure file handling
+---
 
-### 2. **MediSync - Healthcare Dashboard**
-- **Tech Stack**: PHP, JavaScript, MySQL, Excel Integration
-- **Description**: Healthcare dashboard for tracking patient metrics and generating insights
-- **Features**: Real-time analytics, data visualization, multi-source integration
+## 🌍 Deployment
 
-### 3. **Automated Doctor Dustbin (IoT)**
-- **Tech Stack**: Arduino, IoT Sensors, Servo Motor, C++
-- **Description**: Smart dustbin with waste level detection and automated alerts
-- **Achievement**: Published research paper in IJRAR (Impact Factor: 7.17)
+### GitHub Pages
+1. Push code to GitHub
+2. Go to **Settings > Pages**
+3. Select `main` branch → Save
+4. Live at: `https://parths01.github.io/Portfolio/`
 
-### 4. **Veer Sahayata - Defence Welfare Portal**
-- **Tech Stack**: React, PHP, MySQL, Chart.js
-- **Description**: Web portal for Indian Defence personnel and families
-- **Features**: Pension tracking, news updates, document verification
+### Netlify / Vercel
+1. Connect GitHub repo
+2. Auto-deploys on every push
+3. Supports custom domain
 
-## 🛠️ Technical Skills
-
-- **Programming**: PHP, Java, Python, C
-- **Web Technologies**: HTML5, CSS3, JavaScript, React
-- **Databases**: MySQL, PostgreSQL
-- **Tools**: Git, GitHub, Arduino, Microsoft 365 Copilot
-
-## 📜 Certifications
-
-- Introduction to Programming using Java & DSA
-- Development using HTML5 and JavaScript
-- Learning Microsoft 365 Copilot
-- Microsoft Copilot: The Art of Prompt Writing
-- Deloitte Australia – Data Analytics Job Simulation
-
-## 🌟 Portfolio Features
-
-- **Modern Design**: Clean, professional layout with smooth animations
-- **Dark/Light Theme**: Toggle between themes with persistent storage
-- **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
-- **Smooth Scrolling**: Elegant navigation with scroll indicators
-- **Typing Animation**: Dynamic hero text with multiple phrases
-- **Contact Form**: Functional contact form with validation
-- **SEO Optimized**: Proper meta tags and semantic HTML
-- **Fast Loading**: Optimized assets and efficient code
+---
 
 ## 📧 Contact Form Setup
 
-The contact form currently shows success messages locally. To make it functional:
+The contact form validates client-side. To make it send real emails, integrate one of:
 
-1. **Backend Integration**: Connect to a backend service (Node.js, PHP, etc.)
-2. **Email Services**: Use services like EmailJS, Netlify Forms, or Formspree
-3. **Validation**: Server-side validation for security
+- **[EmailJS](https://www.emailjs.com/)** — No backend required
+- **[Formspree](https://formspree.io/)** — Simple form endpoint
+- **[Netlify Forms](https://www.netlify.com/products/forms/)** — Netlify-native
 
-### Example with EmailJS:
 ```javascript
-// Add to script.js
+// Example: EmailJS integration in script.js
 emailjs.send('service_id', 'template_id', {
     name: name,
     email: email,
@@ -188,41 +274,38 @@ emailjs.send('service_id', 'template_id', {
 });
 ```
 
-## 🚀 Deployment
+---
 
-### GitHub Pages
-1. Push code to GitHub repository
-2. Go to Settings > Pages
-3. Select source branch (main/master)
-4. Your site will be available at `username.github.io/repository-name`
+## 📱 Responsive Breakpoints
 
-### Netlify
-1. Connect GitHub repository to Netlify
-2. Auto-deploy on every push
-3. Custom domain support
+| Breakpoint | Range |
+|---|---|
+| Mobile | < 768px |
+| Tablet | 768px – 1024px |
+| Desktop | > 1024px |
 
-### Vercel
-1. Import GitHub repository
-2. Automatic deployments
-3. Free custom domains
+---
 
 ## 📄 License
 
 This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
 
+---
+
 ## 🤝 Contributing
 
-Feel free to fork this project and customize it for your own use. If you make improvements, consider sharing them back!
-
-## 📞 Support
-
-If you need help customizing this portfolio:
-- Check the code comments for guidance
-- Refer to CSS/JS documentation
-- Create an issue in the repository
+Feel free to **fork** this project and customize it for your own use. If you make improvements, consider sharing them back via a pull request!
 
 ---
 
-**Built with ❤️ by Parth**
+<div align="center">
 
-*Last updated: July 2025*
+**Built with ❤️ by Parth Suryawanshi**
+
+*© 2025 Parth Suryawanshi · Pune, Maharashtra, India*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/parthsuryawanshi)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/Parths01)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-green?style=flat&logo=globe)](https://parths01.github.io/Portfolio/)
+
+</div>
